@@ -1,9 +1,17 @@
 .page-main__header {
-  padding: 76px 0 74px 0;
+  width: 100%;
+  padding: 76px 39px 74px 39px;
+  margin: 0;
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  color: black;
+  line-height: 30px;
+  word-wrap: initial;
 
   &--index {
-    padding: 76px 0 120px 0;
-    background: url("../img/hero-mobile@1x.jpg") center no-repeat;
+    padding: 76px 39px 120px 39px;
+    background: url("../img/hero-mobile@1x.jpg") center 13% no-repeat;
   }
 }
 
@@ -13,5 +21,44 @@
       background: url("../img/hero-mobile@2x.jpg") center no-repeat;
       background-size: 200%;
     }
+  }
+}
+
+.page-main__categories-list {
+  .resetList();
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main__categories-link {
+  display: block;
+  padding: 30px;
+  position: relative;
+  text-align: left;
+  background-color: @green;
+  text-decoration: none;
+  font-size: 19px;
+  color: white;
+  line-height: 24px;
+  font-weight: @bold;
+
+  &--dark {
+    background-color: @dark-green;
+  }
+}
+
+.page-main__categories-image {
+  position: absolute;
+  top: 23px;
+  right: 36px;
+  fill: @very-dark-green;
+  opacity: 0.5;
+
+  &--dark {
+    position: absolute;
+    top: 21px;
+    right: 28px;
+    fill: @very-dark-green;
+    opacity: 0.5;
   }
 }

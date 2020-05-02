@@ -26,8 +26,8 @@
           <use xlink:href="#logo-desktop" />
         </svg>
       </a>
-      <button type="button" class="page-header__toggle">
-        <svg class="page-header__toggle-image page-header__toggle-image--open" width="21" height="20">
+      <button type="button" class="page-header__toggle menu-open--default">
+        <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
           <use xlink:href="#icon-menu-open" />
         </svg>
         <svg class="page-header__toggle-image page-header__toggle-image--close" width="21" height="20">
@@ -35,7 +35,7 @@
         </svg>
       </button>
     </div>
-    <nav class="page-header__nav">
+    <nav class="page-header__nav menu-open--default">
       <ul class="page-header__nav-list">
         <li class="page-header__nav-item">
           <a href="catalog.html" class="page-header__nav-link">Каталог товаров</a>
@@ -63,14 +63,22 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__header page-main__header--index">Милые штучки ручной работы для дома</h1>
+    <h1 class="page-main__header page-main__header--index">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
     <div class="page-main__categories">
       <ul class="page-main__categories-list">
         <li class="page-main__categories-item page-main__categories-item--light">
-          <a href="#">Предметы интерьера</a>
+          <a class="page-main__categories-link" href="#">Предметы<br>интерьера
+            <svg class="page-main__categories-image" width="40" height="62">
+              <use xlink:href="#icon-interior"/>
+            </svg>
+          </a>
+
         </li>
         <li class="page-main__categories-item page-main__categories-item--dark">
-          <a href="#">Детские игрушки</a>
+          <a class="page-main__categories-link page-main__categories-link--dark" href="#">Детские<br>игрушки
+            <svg class="page-main__categories-image--dark" width="60" height="60">
+              <use xlink:href="#icon-toy"/>
+            </svg></a>
         </li>
       </ul>
     </div>
@@ -78,7 +86,7 @@
       <div class="product-week__wrapper">
         <h3 class="product-week__name">Вязаные корзинки</h3>
         <h2 class="product-week__label">Товар недели</h2>
-        <p class="product-week__decription">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
+        <p class="product-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
           размерах.</p>
         <ul class="product-week__list">
           <ul class="product-week__row">
@@ -110,7 +118,7 @@
               width="260" height="315" alt="Левон">
           </picture>
         </a>
-        <p class="product-week__cost">990 руб.</p>
+        <p class="product-week__cost">Цена: 990 руб.</p>
         <button type="button" class="product-week__buy">Заказать</button>
       </div>
     </section>
@@ -121,25 +129,25 @@
           <svg class="about__item-image" width="32" height="37">
             <use xlink:href="#icon-feature-flower" />
           </svg>
-          <p class="about__item-content">Экологически чистые материалы</p>
+          <p class="about__item-content">Экологически чистые&nbsp;материалы</p>
         </li>
         <li class="about__item">
           <svg class="about__item-image" width="47" height="27">
             <use xlink:href="#icon-feature-money" />
           </svg>
-          <p class="about__item-content">Скандинавский стиль по российской цене</p>
+          <p class="about__item-content">Скандинавский стиль по&nbsp;российской&nbsp;цене</p>
         </li>
         <li class="about__item">
           <svg class="about__item-image" width="34" height="27">
             <use xlink:href="#icon-feature-heart" />
           </svg>
-          <p class="about__item-content">Увеличивает лайки на фотографиях</p>
+          <p class="about__item-content">Увеличивает лайки на&nbsp;фотографиях</p>
         </li>
         <li class="about__item">
           <svg class="about__item-image" width="35" height="34">
             <use xlink:href="#icon-feature-ball" />
           </svg>
-          <p class="about__item-content">Связано вручную с любовью и умилением</p>
+          <p class="about__item-content">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</p>
         </li>
         <li class="about__item">
           <svg class="about__item-image" width="55" height="23">
@@ -151,7 +159,7 @@
           <svg class="about__item-image" width="33" height="32">
             <use xlink:href="#icon-feature-gift" />
           </svg>
-          <p class="about__item-content">Доставляется в подарочной упаковке</p>
+          <p class="about__item-content">Доставляется в подарочной&nbsp;упаковке</p>
         </li>
       </ul>
     </section>
@@ -167,12 +175,12 @@
             <h4 class="reviews__item-name">Анастасия Красильникова</h4>
             <p class="reviews__item-insta">@misssssiskras</p>
           </li>
-          <li class="reviews__item">
+          <li class="reviews__item visually-hidden">
             <p class="reviews__item-content">Текст отзыва</p>
             <h4 class="reviews__item-name">Имя Фамилия</h4>
             <p class="reviews__item-insta">Тэг</p>
           </li>
-          <li class="reviews__item">
+          <li class="reviews__item visually-hidden">
             <p class="reviews__item-content">Текст отзыва</p>
             <h4 class="reviews__item-name">Имя Фамилия</h4>
             <p class="reviews__item-insta">Тэг</p>
@@ -251,7 +259,24 @@
       </a>
     </div>
   </footer>
+  <script>
+    var toggle = document.querySelector(".page-header__toggle");
+    var DOM = [
+      toggle,
+      document.querySelector(".page-header__nav"),
+    ];
 
+    DOM.forEach(element => {
+      element.classList.remove("menu-open--default");
+    });
+
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      DOM.forEach(element => {
+        element.classList.toggle("menu-open");
+      });
+    });
+  </script>
 </body>
 
 </html>
