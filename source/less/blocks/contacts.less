@@ -1,12 +1,45 @@
-.contacts__term {
-  width: 48px;
-  margin-right: 31px;
-  font-size: 15px;
+.contacts__wrapper {
+  padding: 43px 30px 0;
 }
 
-.contacts__definition {
-  text-align: left;
+.contacts__header {
   margin: 0;
+  padding-bottom: 42px;
+  .setFont(18px, black, 30px, @bold, left);
+}
+
+.contacts__list {
+  width: 100%;
+  .setFont(15px, @dark-grey, 30px, @regular, left);
+  .resetList();
+  display: table;
+  padding-bottom: 20px;
+}
+
+.contacts__value-mail,
+.contacts__value-address {
+  .setFont(15px, @dark-grey, 30px, @regular, left);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contacts__row {
+  .resetList();
+  display: table-row;
+
+}
+
+.contacts__cell {
+  display: table-cell;
+  padding-bottom: 40px;
+}
+
+.contacts__option {
+  width: 48px;
+}
+
+.contacts__value {
+  padding-left: 31px;
 }
 
 .contacts__map-wrapper {
@@ -25,21 +58,20 @@
   }
 }
 
-.contacts__list {
-  margin: 0;
-  padding: 0;
-  display: table;
-  padding-bottom: 20px;
+.contacts__button-wrapper {
+  width: 100%;
+  padding: 40px 30px;
 }
 
-.contacts__row {
-  display: table-row;
-}
-
-.contacts__cell {
-  display: table-cell;
-}
-
-.contacts__option {
-  padding-right: 32px;
+.contacts__button-contact {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  color: @dark-grey;
+  font-weight: @bold;
+  border: 2px solid @dark-grey;
 }

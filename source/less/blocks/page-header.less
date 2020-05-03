@@ -11,14 +11,6 @@
   box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
 }
 
-.page-header__logo-image {
-  display: none;
-
-  &--mobile {
-    display: block;
-  }
-}
-
 .page-header__toggle {
   padding: 0;
   margin: 0;
@@ -48,10 +40,12 @@
 
 .page-header__nav {
   display: none;
+  z-index: 1;
 }
 
-.page-header__nav.menu-open--default {
+.page-header__nav.menu-open.menu-open--default {
   display: block;
+  position: static;
 }
 
 .page-header__nav.menu-open {
@@ -65,6 +59,12 @@
   .resetList();
   display: flex;
   flex-direction: column;
+}
+
+.page-header__nav-item {
+  &--not-mobile {
+    display: none;
+  }
 }
 
 .page-header__nav-link {

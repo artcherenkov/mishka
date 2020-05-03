@@ -4,8 +4,10 @@
   list-style: none;
 }
 
-.setFont(@color, @size, @weight) {
-  color: @color;
+.setFont(@size, @color, @line-height, @weight, @text-align) {
   font-size: @size;
+  color: @color;
+  line-height: @line-height;
   font-weight: @weight;
+  text-align: @text-align;
 }

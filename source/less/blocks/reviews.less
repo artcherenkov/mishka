@@ -1,7 +1,11 @@
 .reviews {
-  padding-bottom: 20px;
   background: url("../img/bg-zigzag-line.svg") -5% 100% no-repeat;
   background-size: 100%;
+}
+
+.reviews__wrapper {
+  padding: 45px 30px;
+  padding-top: 0;
 }
 
 .reviews__list {
@@ -9,6 +13,8 @@
 }
 
 .reviews__header {
+  margin: 0;
+  padding-bottom: 37px;
   font-size: 25px;
   line-height: 30px;
   text-align: left;
@@ -17,6 +23,8 @@
 }
 
 .reviews__item-content {
+  margin: 0;
+  padding-bottom: 37px;
   font-size: 15px;
   line-height: 30px;
   text-align: left;
@@ -24,6 +32,7 @@
 }
 
 .reviews__item-name {
+  margin: 0;
   font-size: 17px;
   line-height: 24px;
   text-align: left;
@@ -32,9 +41,50 @@
 }
 
 .reviews__item-insta {
+  margin: 0;
+  padding-bottom: 33px;
   font-size: 17px;
   line-height: 30px;
   text-align: left;
   color: @dark-grey;
   font-weight: @regular;
+}
+
+.reviews__toggles {
+  width: 100%;
+  display: flex;
+  padding-bottom: 37px;
+}
+
+.reviews__toggle {
+  width: 50%;
+  padding: 13px 0;
+  margin: 0;
+  border: none;
+  border: 1px solid #ececec;
+  background-color: white;
+
+  &--left {
+    padding-left: 38px;
+    padding-right: 42px;
+  }
+
+  &--right {
+    border-left: none;
+    padding-right: 38px;
+    padding-left: 42px;
+  }
+}
+
+.reviews__button-send {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  color: @dark-grey;
+  font-weight: @bold;
+  border: 2px solid @dark-grey;
 }

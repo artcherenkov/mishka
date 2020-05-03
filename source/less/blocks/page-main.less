@@ -1,26 +1,36 @@
-.page-main__header {
+.page-main {
+  z-index: 0;
+}
+
+.page-main__header-wrapper {
   width: 100%;
-  padding: 76px 39px 74px 39px;
+  background: url("../img/hero-mobile@1x.jpg") center 15% no-repeat;
+  background-size: auto 130%;
+}
+
+.page-main__header {
+  padding: 76px 30px 74px;
   margin: 0;
-  text-align: center;
-  font-size: 27px;
-  font-weight: bold;
-  color: black;
-  line-height: 30px;
-  word-wrap: initial;
+  .setFont(27px, black, 30px, @bold, center);
 
   &--index {
-    padding: 76px 39px 120px 39px;
-    background: url("../img/hero-mobile@1x.jpg") center 13% no-repeat;
+    padding: 76px 30px 120px;
+  }
+
+  &--catalog {
+    background-color: @light-grey;
+  }
+
+  &--form {
+    background-color: @light-grey;
+    padding: 76px 30px 80px;
   }
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .page-main__header {
-    &--index {
-      background: url("../img/hero-mobile@2x.jpg") center no-repeat;
-      background-size: 200%;
-    }
+  .page-main__header-wrapper {
+      background: url("../img/hero-mobile@2x.jpg") center 15% no-repeat;
+      background-size: auto 130%;
   }
 }
 
