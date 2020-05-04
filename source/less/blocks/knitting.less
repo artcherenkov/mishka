@@ -1,5 +1,7 @@
 .knitting {
   padding: 30px 30px 55px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .knitting__intro {
@@ -117,24 +119,27 @@
 @media (min-width: @tablet) {
   .knitting {
     padding: 0;
+    max-width: initial;
   }
 
   .knitting__intro {
-    padding: 68px 105px 15px 51px;
+    width: 768px;
+    margin: 0 auto;
+    padding: 68px 50px 15px 50px;
     .setFont(17px, @dark-grey, 30px, @regular, left);
   }
 
-  .knitting__block {
-    padding: 0 50px;
-  }
-
   .knitting__part {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
     border: none;
     position: relative;
   }
 
   .knitting__header {
     top: 30px;
+    left: 50px;
     position: absolute;
     border: none;
   }
@@ -172,6 +177,8 @@
   }
 
   .knitting__controls {
+    width: 768px;
+    margin: 0 auto;
     display: flex;
     padding: 50px;
     justify-content: space-between;

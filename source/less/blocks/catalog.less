@@ -1,10 +1,12 @@
 .catalog__wrapper {
+  max-width: 500px;
+  margin: 0 auto;
   padding: 0 30px;
 }
 
 .catalog__list {
   .resetList();
-  padding: 30px 0;
+  // padding: 30px 0;
 }
 
 .catalog__item:not(:last-child) {
@@ -62,6 +64,7 @@
 @media (min-width: @tablet) {
   .catalog__wrapper {
     padding: 0 50px;
+    max-width: initial;
   }
 
   .catalog__item {

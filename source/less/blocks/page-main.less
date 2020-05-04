@@ -3,22 +3,30 @@
 }
 
 .page-main__header-wrapper {
-  width: 100%;
   background: #fbfbfb url("../img/hero-mobile@1x.jpg") center 0% no-repeat;
-  // background-size: auto 130%;
+
+  &--not-index {
+    background-image: none;
+    background-color: #f1f1f1;
+  }
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .page-main__header-wrapper {
     background: #fbfbfb url("../img/hero-mobile@2x.jpg") center 0% no-repeat;
     background-size: auto 75%;
+    
+    &--not-index {
+      background-image: none;
+      background-color: #f1f1f1;
+    }
   }
 }
 
 .page-main__header {
   padding: 76px 0 74px;
-  width: 260px;
   margin: 0 auto;
+  width: 260px;
   .setFont(27px, black, 30px, @bold, center);
 
   &--index {
