@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__controls">
+  <header class="page-header page-header--index">
+    <!-- <div class="page-header__controls">
       <a href="index.html" class="page-header__logo-link">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
@@ -20,23 +20,42 @@
         </picture>
       </a>
       <button type="button" class="page-header__toggle menu-open menu-open--default">
-        <svg class="page-header__toggle-image page-header__toggle-image--open" width="21" height="20">
+        <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
           <use xlink:href="#icon-menu-open" />
         </svg>
         <svg class="page-header__toggle-image page-header__toggle-image--close" width="21" height="20">
           <use xlink:href="#icon-menu-close" />
         </svg>
       </button>
-    </div>
-    <nav class="page-header__nav menu-open menu-open--default">
+    </div> -->
+    <nav class="page-header__nav menu-open">
       <ul class="page-header__nav-list">
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--logo">
+          <div class="page-header__controls">
+            <a href="index.html" class="page-header__logo-link">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип Mishka" width="86" height="35">
+              </picture>
+            </a>
+            <button type="button" class="page-header__toggle menu-open menu-open--default">
+              <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
+                <use xlink:href="#icon-menu-open" />
+              </svg>
+              <svg class="page-header__toggle-image page-header__toggle-image--close" width="21" height="20">
+                <use xlink:href="#icon-menu-close" />
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="page-header__nav-item page-header__nav-item--catalog">
           <a href="catalog.html" class="page-header__nav-link">Каталог товаров</a>
         </li>
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--knitting">
           <a href="form.html" class="page-header__nav-link">Вязание на заказ</a>
         </li>
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--search">
           <a href="#" class="page-header__nav-link">
             <svg class="page-header__nav-image page-header__nav-image--search" width="18" height="18">
               <use xlink:href="#icon-search" />
@@ -44,7 +63,7 @@
             <span class="page-header__search-text">Поиск по сайту</span>
           </a>
         </li>
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--cart">
           <a href="#" class="page-header__nav-link">
             <svg class="page-header__nav-image page-header__nav-image--cart" width="18" height="21">
               <use xlink:href="#icon-cart" />
@@ -52,11 +71,14 @@
             Корзина: пока пуста
           </a>
         </li>
-        <li class="page-header__nav-item page-header__nav-item--not-mobile">
+        <li class="page-header__nav-item page-header__nav-item--new page-header__nav-item--not-mobile">
           <a href="" class="page-header__nav-link">Новые поступления</a>
         </li>
-        <li class="page-header__nav-item page-header__nav-item--not-mobile">
+        <li class="page-header__nav-item page-header__nav-item--sale page-header__nav-item--not-mobile">
           <a href="" class="page-header__nav-link">Распродажа</a>
+        </li>
+        <li class="page-header__nav-item page-header__nav-item--shipping page-header__nav-item--not-mobile">
+          <p class="page-header__nav-text">Бесплатная доставка по России</p>
         </li>
       </ul>
     </nav>
@@ -74,7 +96,7 @@
         <div class="knitting__block knitting__type-wrapper">
           <fieldset class="knitting__type knitting__part">
             <legend class="knitting__type-header knitting__header">Тип</legend>
-            <ul class="knitting__type-list">
+            <ul class="knitting__type-list knitting__list">
               <li class="knitting__type-item">
                 <input class="knitting__type-input input__radio" name="which-type" type="radio" value="interior-part"
                   id="interior-part" checked>
@@ -93,7 +115,7 @@
         <div class="knitting__block knitting__color-wrapper">
           <fieldset class="knitting__color knitting__part">
             <legend class="knitting__color-header knitting__header">Цвет</legend>
-            <ul class="knitting__color-list">
+            <ul class="knitting__color-list knitting__list">
               <li class="knitting__color-item">
                 <input class="knitting__color-input input__check" id="white" name="white" type="checkbox" checked>
                 <label class="knitting__color-label input__check-label" for="white">Белый</label>
@@ -124,23 +146,26 @@
         <div class="knitting__block knitting__personal-wrapper">
           <fieldset class="knitting__personal knitting__part">
             <legend class="knitting__personal-header knitting__header">ФИО</legend>
-            <ul class="knitting__personal-list">
+            <ul class="knitting__personal-list knitting__list">
               <li class="knitting__personal-item">
-                <label class="knitting__personal-label input__text-label" for="name">Имя:<input
+                <label class="knitting__personal-label input__text-label" for="name">Имя:</label>
+                <input
                     class="knitting__personal-input input__text" type="text" id="name" name="name"
-                    placeholder="Введите ваше имя*" required></label>
+                    placeholder="Введите ваше имя*" required>
 
               </li>
               <li class="knitting__personal-item">
-                <label class="knitting__personal-label input__text-label" for="surname">Фамилия:<input
+                <label class="knitting__personal-label input__text-label" for="surname">Фамилия:</label>
+                <input
                     class="knitting__personal-input input__text" type="text" id="surname" name="surname"
-                    placeholder="Укажите фамилию*" required></label>
+                    placeholder="Укажите фамилию*" required>
 
               </li>
               <li class="knitting__personal-item">
-                <label class="knitting__personal-label input__text-label" for="third-name">Отчество:<input
+                <label class="knitting__personal-label input__text-label" for="third-name">Отчество:</label>
+                <input
                     class="knitting__personal-input input__text" type="text" id="third-name" name="third-name"
-                    placeholder="Отчество, если желаете"></label>
+                    placeholder="Отчество, если желаете">
               </li>
             </ul>
           </fieldset>
@@ -148,23 +173,31 @@
         <div class="knitting__block knitting__contact-wrapper">
           <fieldset class="knitting__contact knitting__part">
             <legend class="knitting__contact-header knitting__header">тел</legend>
-            <label class="visually-hidden" for="tel">Введите номер телефона</label>
-            <input class="knitting__contact-input input__text" type="tel" id="tel" name="tel"
-              placeholder="+7 XXX XXX XX XX*" required>
+            <div class="knitting__contact-item">
+              <label class="visually-hidden" for="tel">Введите номер телефона</label>
+              <input class="knitting__contact-input input__text" type="tel" id="tel" name="tel"
+                placeholder="+7 XXX XXX XX XX*" required>
+            </div>
+
           </fieldset>
           <fieldset class="knitting__contact knitting__part">
             <legend class="knitting__contact-header knitting__contact-header--email knitting__header">e-mail</legend>
-            <label class="visually-hidden" for="mail">Введите почту</label>
-            <input class="knitting__contact-input input__text" type="email" id="mail" name="mail"
-              placeholder="Ваш Email*" required>
+            <div class="knitting__contact-item">
+              <label class="visually-hidden" for="mail">Введите почту</label>
+              <input class="knitting__contact-input input__text" type="email" id="mail" name="mail"
+                placeholder="Ваш Email*" required>
+            </div>
+
           </fieldset>
         </div>
         <div class="knitting__block knitting__extra-wrapper">
           <fieldset class="knitting__extra knitting__part">
             <legend class="knitting__extra-header knitting__header">Доп</legend>
-            <label for="extra" class="visually-hidden">Отметьте пожелания</label>
-            <textarea class="knitting__extra-input input__textarea" name="extra" id="extra"
-              placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="knitting__extra-item">
+              <label for="extra" class="visually-hidden">Отметьте пожелания</label>
+              <textarea class="knitting__extra-input input__textarea" name="extra" id="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+
           </fieldset>
         </div>
         <div class="knitting__controls">
@@ -176,6 +209,11 @@
   </main>
 
   <footer class="page-footer">
+    <p class="page-footer__logo">
+      <svg class="page-footer__logo-image" width="102" height="34">
+        <use xlink:href="#logo-footer"/>
+      </svg>
+    </p>
     <div class="page-footer__social">
       <p class="page-footer__social-list">
         <a href="instagram.com" class="page-footer__social-link">
@@ -194,29 +232,6 @@
           </svg>
         </a>
       </p>
-      <!-- <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
-          <a href="instagram.com" class="page-footer__social-link">
-            <svg class="page-footer__social-image" width="22" height="21">
-              <use xlink:href="#icon-insta" />
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="facebook.com" class="page-footer__social-link">
-            <svg class="page-footer__social-image" width="15" height="28">
-              <use xlink:href="#icon-fb" />
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="twitter.com" class="page-footer__social-link">
-            <svg class="page-footer__social-image" width="23" height="20">
-              <use xlink:href="#icon-twitter" />
-            </svg>
-          </a>
-        </li>
-      </ul> -->
     </div>
     <p class="page-footer__copyright-text">Разработано
       <a href="htmlacademy.ru" class="page-footer__copyright-link">

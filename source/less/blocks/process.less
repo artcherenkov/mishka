@@ -68,3 +68,37 @@
   font-weight: @bold;
   border: 2px solid @dark-grey;
 }
+
+@media (min-width: @tablet) {
+  .process {
+    padding: 0 50px;
+  }
+
+  .process__wrapper {
+    width: 668px;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 63px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process__video {
+    order: 1;
+  }
+
+  .process__header {
+    order: 2;
+    .setFont(20px, black, 24px, @bold, left);
+    margin-top: -5px;
+  }
+
+  .process__content-wrapper {
+    order: 3;
+    padding-top: 0;
+  }
+
+  .process__intro {
+    .setFont(15px, @dark-grey, 30px, @regular, left);
+  }
+}

@@ -87,3 +87,64 @@
   font-weight: @bold;
   border: 2px solid @dark-grey;
 }
+
+@media (min-width: @tablet) {
+  .reviews {
+    padding-top: 85px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 60px;
+    background: url("../img/review@1x.jpg") no-repeat;
+  }
+
+  .reviews__wrapper {
+    padding: 45px 50px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .reviews__header {
+    order: 1;
+    .setFont(43px, black, 50px, @bold, left);
+    padding: 0;
+    margin-bottom: 53px;
+  }
+
+  .reviews__button-send {
+    width: 175px;
+    order: 2;
+    margin-bottom: 53px;
+  }
+
+  .reviews__item-content {
+    .setFont(17px, @dark-grey, 30px, @regular, left);
+  }
+
+  .reviews__list {
+    order: 3;
+  }
+
+  .reviews__toggles {
+    width: 175px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+  }
+
+  .reviews__toggle {
+    // display: none;
+    border: none;
+    padding: 0;
+  }
+
+  .reviews__item-insta {
+    padding: 0;
+  }
+}

@@ -25,3 +25,37 @@
   color: black;
   font-weight: @bold;
 }
+
+@media (min-width: @tablet) {
+  .about {
+    padding: 33px 50px;
+  }
+
+  .about__header {
+    .setFont(43px, black, 50px, @bold, left);
+    padding-bottom: 47px;
+  }
+
+  .about__list {
+    .resetList();
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about__item {
+    max-width: 295px;
+    padding-bottom: 60px;
+  }
+
+  .about__item-image {
+    fill: @green;
+  }
+
+  .about__item-content {
+    font-size: 17px;
+    line-height: 20px;
+    text-align: left;
+    color: black;
+    font-weight: @bold;
+  }
+}

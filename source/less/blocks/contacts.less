@@ -46,6 +46,7 @@
   background:
     url("../img/icon-map-pin.svg") 55% 40% no-repeat,
     url("../img/map-mobile@1x.jpg") no-repeat;
+  background-size: auto, cover;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -73,4 +74,77 @@
   color: @dark-grey;
   font-weight: @bold;
   border: 2px solid @dark-grey;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    background: url("../img/bg-zigzag-line.svg") 0% 0% no-repeat;
+    background-size: 100%;
+  }
+
+  .contacts__wrapper {
+    padding: 55px 50px 0;
+  }
+
+  .contacts__header {
+    .setFont(43px, black, 81px, @bold, left);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 81px;
+      right: 0;
+      background: url("../img/icon-flag.svg");
+    }
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contacts__row {
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .contacts__cell {
+    display: block;
+  }
+
+  .contacts__option,
+  .contacts__value-mail,
+  .contacts__value-address {
+    font-size: 17px;
+  }
+
+  .contacts__option {
+    width: 55px;
+  }
+
+  //временно задал высоту
+  .contacts__map-wrapper {
+    height: 457px;
+    background:
+      url("../img/icon-map-pin.svg") 52% 40% no-repeat,
+      url("../img/map-tablet@1x.jpg") no-repeat;
+    background-size: auto, cover;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contacts__map-wrapper {
+      background:
+        url("../img/icon-map-pin.svg") 52% 40% no-repeat,
+        url("../img/map-tablet@2x.jpg") no-repeat;
+      background-size: auto, cover;
+    }
+  }
+
+  .contacts__button-contact {
+    width: 230px;
+    margin: 0 auto;
+  }
 }

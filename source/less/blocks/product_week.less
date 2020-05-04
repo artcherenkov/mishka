@@ -74,3 +74,114 @@
   border: 2px solid @dark-grey;
   // margin-bottom: 36px;
 }
+
+@media (min-width: @tablet) {
+  .product-of-the-week {
+    background: url("../img/bg-zigzag-line.svg") -5% 100% no-repeat;
+    background-size: 100%;
+    padding: 35px 50px;
+    padding-bottom: 50px;
+  }
+
+  .product-of-the-week__wrapper {
+    position: relative;
+    padding: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .product-of-the-week__image-link {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    // display: none;
+  }
+
+  .product-of-the-week__image {
+    width: 333px;
+    height: 404px;
+  }
+
+  .product-of-the-week__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 55px;
+  }
+
+  .product-of-the-week__name {
+    margin: 0;
+    .setFont(43px, black, 50px, @bold, left);
+  }
+
+  .product-of-the-week__label {
+    margin: 0;
+    width: 70px;
+    .setFont(17px, @green, 17px, @bold, center);
+    text-transform: uppercase;
+  }
+
+  .product-of-the-week__description {
+    margin: 0;
+    .setFont(17px, @dark-grey, 30px, @regular, left);
+    width: 282px;
+    padding-bottom: 55px;
+  }
+
+  .product-of-the-week__list {
+    width: 291px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 59px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+    display: table;
+    color: @dark-grey;
+  }
+
+  .product-of-the-week__row {
+    display: table-row;
+  }
+
+  .product-of-the-week__cell {
+    display: table-cell;
+    line-height: 39px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .product-of-the-week__option {
+    padding-right: 31px;
+  }
+
+  .product-of-the-week__buy-wrapper {
+    width: 290px;
+  }
+
+  .product-of-the-week__cost {
+    margin: 0;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    color: @dark-grey;
+    font-weight: @bold;
+    padding-bottom: 34px;
+  }
+
+  .product-of-the-week__buy {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    color: @dark-grey;
+    font-weight: @bold;
+    border: 2px solid @dark-grey;
+    // margin-bottom: 36px;
+  }
+}

@@ -143,3 +143,64 @@
 .input__textarea::placeholder {
   padding: 10px;
 }
+
+@media (min-width: @tablet) {
+  .input__radio {
+    position: absolute;
+    width: 0;
+    height: 0;
+    appearance: none;
+    top: 0;
+    left: 0;
+  }
+
+  .input__radio-label {
+    padding-left: 75px;
+    padding-bottom: 0;
+    line-height: 53px;
+
+    &::before {
+      left: 0;
+      top: 0;
+      width: 52px;
+      height: 53px;
+    }
+
+    &::after {
+      left: 0;
+      top: 0;
+      width: 52px;
+      height: 53px;
+      background-size: 22px 22px;
+    }
+  }
+
+  .input__check {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    appearance: none;
+  }
+
+  .input__check-label {
+    padding-left: 82px;
+    line-height: 52px;
+
+    &::before {
+      width: 54px;
+      height: 52px;
+      background-size: 33px 22px;
+      background-color: transparent;
+    }
+
+    &::after {
+      background: url("../img/icon-tick.svg") center no-repeat;
+      width: 54px;
+      height: 52px;
+    }
+  }
+
+  .input__text {
+    background-color: transparent;
+  }
+}

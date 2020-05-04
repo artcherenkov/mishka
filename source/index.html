@@ -14,7 +14,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header page-header--index">
-    <div class="page-header__controls">
+    <!-- <div class="page-header__controls">
       <a href="index.html" class="page-header__logo-link">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
@@ -30,16 +30,35 @@
           <use xlink:href="#icon-menu-close" />
         </svg>
       </button>
-    </div>
-    <nav class="page-header__nav menu-open menu-open--default">
+    </div> -->
+    <nav class="page-header__nav menu-open">
       <ul class="page-header__nav-list">
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--logo">
+          <div class="page-header__controls">
+            <a href="index.html" class="page-header__logo-link">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип Mishka" width="86" height="35">
+              </picture>
+            </a>
+            <button type="button" class="page-header__toggle menu-open menu-open--default">
+              <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
+                <use xlink:href="#icon-menu-open" />
+              </svg>
+              <svg class="page-header__toggle-image page-header__toggle-image--close" width="21" height="20">
+                <use xlink:href="#icon-menu-close" />
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="page-header__nav-item page-header__nav-item--catalog">
           <a href="catalog.html" class="page-header__nav-link">Каталог товаров</a>
         </li>
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--knitting">
           <a href="form.html" class="page-header__nav-link">Вязание на заказ</a>
         </li>
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--search">
           <a href="#" class="page-header__nav-link">
             <svg class="page-header__nav-image page-header__nav-image--search" width="18" height="18">
               <use xlink:href="#icon-search" />
@@ -47,7 +66,7 @@
             <span class="page-header__search-text">Поиск по сайту</span>
           </a>
         </li>
-        <li class="page-header__nav-item">
+        <li class="page-header__nav-item page-header__nav-item--cart">
           <a href="#" class="page-header__nav-link">
             <svg class="page-header__nav-image page-header__nav-image--cart" width="18" height="21">
               <use xlink:href="#icon-cart" />
@@ -55,11 +74,14 @@
             Корзина: пока пуста
           </a>
         </li>
-        <li class="page-header__nav-item page-header__nav-item--not-mobile">
+        <li class="page-header__nav-item page-header__nav-item--new page-header__nav-item--not-mobile">
           <a href="" class="page-header__nav-link">Новые поступления</a>
         </li>
-        <li class="page-header__nav-item page-header__nav-item--not-mobile">
+        <li class="page-header__nav-item page-header__nav-item--sale page-header__nav-item--not-mobile">
           <a href="" class="page-header__nav-link">Распродажа</a>
+        </li>
+        <li class="page-header__nav-item page-header__nav-item--shipping page-header__nav-item--not-mobile">
+          <p class="page-header__nav-text">Бесплатная доставка по России</p>
         </li>
       </ul>
     </nav>
@@ -67,33 +89,34 @@
   <main class="page-main">
     <div class="page-main__header-wrapper">
       <h1 class="page-main__header page-main__header--index">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
-    </div>
-    <div class="page-main__categories">
-      <ul class="page-main__categories-list">
-        <li class="page-main__categories-item page-main__categories-item--light">
-          <a class="page-main__categories-link" href="#">Предметы<br>интерьера
-            <svg class="page-main__categories-image" width="40" height="62">
-              <use xlink:href="#icon-interior" />
-            </svg>
-          </a>
-
-        </li>
-        <li class="page-main__categories-item page-main__categories-item--dark">
-          <a class="page-main__categories-link page-main__categories-link--dark" href="#">Детские<br>игрушки
-            <svg class="page-main__categories-image--dark" width="60" height="60">
-              <use xlink:href="#icon-toy" />
-            </svg></a>
-        </li>
-      </ul>
+      <div class="page-main__categories">
+        <ul class="page-main__categories-list">
+          <li class="page-main__categories-item page-main__categories-item--light">
+            <a class="page-main__categories-link" href="#">Предметы<br>интерьера
+              <svg class="page-main__categories-image" width="40" height="62">
+                <use xlink:href="#icon-interior" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-main__categories-item page-main__categories-item--dark">
+            <a class="page-main__categories-link page-main__categories-link--dark" href="#">Детские<br>игрушки
+              <svg class="page-main__categories-image--dark" width="60" height="60">
+                <use xlink:href="#icon-toy" />
+              </svg></a>
+          </li>
+        </ul>
+      </div>
+      <svg class="page-main__zigzag" width="320" height="24">
+        <use xlink:href="#bg-zigzag-fill"/>
+      </svg>
     </div>
     <section class="product-of-the-week">
       <div class="product-of-the-week__wrapper">
-        <h3 class="product-of-the-week__name">Вязаные корзинки</h3>
-        <h2 class="product-of-the-week__label">Товар недели</h2>
-        <p class="product-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести
-          расцветках и
-          трех
-          размерах.</p>
+        <div class="product-of-the-week__header">
+          <h3 class="product-of-the-week__name">Вязаные корзинки</h3>
+          <h2 class="product-of-the-week__label">Товар недели</h2>
+        </div>
+        <p class="product-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
         <ul class="product-of-the-week__list">
           <ul class="product-of-the-week__row">
             <li class="product-of-the-week__cell product-of-the-week__option">Цвет</li>
@@ -124,8 +147,10 @@
               srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Левон">
           </picture>
         </a>
-        <p class="product-of-the-week__cost">Цена: 990 руб.</p>
-        <a href="#" class="product-of-the-week__buy">Заказать</a>
+        <div class="product-of-the-week__buy-wrapper">
+          <p class="product-of-the-week__cost">Цена: 990 руб.</p>
+          <a href="#" class="product-of-the-week__buy">Заказать</a>
+        </div>
       </div>
     </section>
     <section class="about">
@@ -206,7 +231,6 @@
         <a class="reviews__button-send" href="#">Написать</a>
       </div>
     </section>
-
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__header">Контакты</h2>
@@ -237,6 +261,11 @@
   </main>
 
   <footer class="page-footer">
+    <p class="page-footer__logo">
+      <svg class="page-footer__logo-image" width="102" height="34">
+        <use xlink:href="#logo-footer"/>
+      </svg>
+    </p>
     <div class="page-footer__social">
       <p class="page-footer__social-list">
         <a href="instagram.com" class="page-footer__social-link">
@@ -255,29 +284,6 @@
           </svg>
         </a>
       </p>
-      <!-- <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
-          <a href="instagram.com" class="page-footer__social-link">
-            <svg class="page-footer__social-image" width="22" height="21">
-              <use xlink:href="#icon-insta" />
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="facebook.com" class="page-footer__social-link">
-            <svg class="page-footer__social-image" width="15" height="28">
-              <use xlink:href="#icon-fb" />
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="twitter.com" class="page-footer__social-link">
-            <svg class="page-footer__social-image" width="23" height="20">
-              <use xlink:href="#icon-twitter" />
-            </svg>
-          </a>
-        </li>
-      </ul> -->
     </div>
     <p class="page-footer__copyright-text">Разработано
       <a href="htmlacademy.ru" class="page-footer__copyright-link">
