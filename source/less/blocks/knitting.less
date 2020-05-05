@@ -196,3 +196,86 @@
     padding: 0;
   }
 }
+
+@media (min-width: @desktop) {
+  .knitting {
+    padding: 0;
+    max-width: initial;
+  }
+
+  .knitting__intro {
+    width: 675px;
+    margin: 0 auto;
+    padding: 68px 0 15px;
+    .setFont(17px, @dark-grey, 30px, @regular, left);
+  }
+
+  .knitting__part {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
+    border: none;
+    position: relative;
+  }
+
+  .knitting__header {
+    top: 30px;
+    left: 50px;
+    position: absolute;
+    border: none;
+  }
+
+  .knitting__list,
+  .knitting__contact-item,
+  .knitting__extra-item {
+    width: 1050px;
+
+    padding: 30px 175px;
+  }
+
+  .knitting__color-wrapper,
+  .knitting__contact-wrapper {
+    background-color: #f1f1f1;
+  }
+
+  .knitting__color-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .knitting__color-item {
+    width: 30%;
+  }
+
+  .knitting__personal-label {
+    line-height: 52px;
+    display: flex;
+    flex-direction: row;
+    padding-right: 25px;
+  }
+
+  .knitting__personal-input {
+    flex-grow: 1;
+    padding-left: 18px;
+  }
+
+  .knitting__controls {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .knitting__submit {
+    width: 230px;
+    order: 1;
+  }
+
+  .knitting__note {
+    order: 2;
+    line-height: 52px;
+    padding: 0;
+  }
+}

@@ -14,23 +14,6 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header page-header--index">
-    <!-- <div class="page-header__controls">
-      <a href="index.html" class="page-header__logo-link">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип Mishka" width="86" height="35">
-        </picture>
-      </a>
-      <button type="button" class="page-header__toggle menu-open menu-open--default">
-        <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
-          <use xlink:href="#icon-menu-open" />
-        </svg>
-        <svg class="page-header__toggle-image page-header__toggle-image--close" width="21" height="20">
-          <use xlink:href="#icon-menu-close" />
-        </svg>
-      </button>
-    </div> -->
     <nav class="page-header__nav menu-open">
       <ul class="page-header__nav-list">
         <li class="page-header__nav-item page-header__nav-item--logo">
@@ -39,7 +22,8 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип Mishka" width="86" height="35">
+                <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип Mishka" width="86"
+                  height="35">
               </picture>
             </a>
             <button type="button" class="page-header__toggle menu-open menu-open--default">
@@ -68,7 +52,7 @@
         </li>
         <li class="page-header__nav-item page-header__nav-item--cart">
           <a href="#" class="page-header__nav-link">
-            <svg class="page-header__nav-image page-header__nav-image--cart" width="18" height="21">
+            <svg class="page-header__nav-image page-header__nav-image--cart" width="21" height="18">
               <use xlink:href="#icon-cart" />
             </svg>
             Корзина: пока пуста
@@ -106,9 +90,7 @@
           </li>
         </ul>
       </div>
-      <svg class="page-main__zigzag" width="320" height="24">
-        <use xlink:href="#bg-zigzag-fill"/>
-      </svg>
+      <div class="page-main__zigzag"></div>
     </div>
     <section class="product-of-the-week">
       <div class="product-of-the-week__wrapper">
@@ -116,41 +98,45 @@
           <h3 class="product-of-the-week__name">Вязаные корзинки</h3>
           <h2 class="product-of-the-week__label">Товар недели</h2>
         </div>
-        <p class="product-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
-        <ul class="product-of-the-week__list">
-          <ul class="product-of-the-week__row">
-            <li class="product-of-the-week__cell product-of-the-week__option">Цвет</li>
-            <li class="product-of-the-week__cell product-of-the-week__value">"Тиффани"/серый</li>
+        <div class="product-of-the-week__product-wrapper">
+          <p class="product-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести
+            расцветках и трех размерах.</p>
+          <ul class="product-of-the-week__list">
+            <ul class="product-of-the-week__row">
+              <li class="product-of-the-week__cell product-of-the-week__option">Цвет:</li>
+              <li class="product-of-the-week__cell product-of-the-week__value">«Тиффани»/серый</li>
+            </ul>
+            <ul class="product-of-the-week__row">
+              <li class="product-of-the-week__cell product-of-the-week__option">Диаметр:</li>
+              <li class="product-of-the-week__cell product-of-the-week__value">25 см</li>
+            </ul>
+            <ul class="product-of-the-week__row">
+              <li class="product-of-the-week__cell product-of-the-week__option">Высота:</li>
+              <li class="product-of-the-week__cell product-of-the-week__value">15 см</li>
+            </ul>
           </ul>
-          <ul class="product-of-the-week__row">
-            <li class="product-of-the-week__cell product-of-the-week__option">Диаметр</li>
-            <li class="product-of-the-week__cell product-of-the-week__value">25 см</li>
-          </ul>
-          <ul class="product-of-the-week__row">
-            <li class="product-of-the-week__cell product-of-the-week__option">Высота</li>
-            <li class="product-of-the-week__cell product-of-the-week__value">15 см</li>
-          </ul>
-        </ul>
-        <a href="" class="product-of-the-week__image-link">
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)"
-              srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+          <a href="" class="product-of-the-week__image-link">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)"
+                srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
-            <source media="(min-width: 1150px)"
-              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)"
-              srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img class="product-of-the-week__image" src="img/triple-set-mobile@1x.jpg"
-              srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Левон">
-          </picture>
-        </a>
-        <div class="product-of-the-week__buy-wrapper">
-          <p class="product-of-the-week__cost">Цена: 990 руб.</p>
-          <a href="#" class="product-of-the-week__buy">Заказать</a>
+              <source media="(min-width: 1150px)"
+                srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img class="product-of-the-week__image" src="img/triple-set-mobile@1x.jpg"
+                srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Левон">
+            </picture>
+          </a>
+          <div class="product-of-the-week__buy-wrapper">
+            <p class="product-of-the-week__cost">Цена: 990 руб.</p>
+            <a href="#" class="product-of-the-week__buy">Заказать</a>
+          </div>
         </div>
+
       </div>
     </section>
     <section class="about">
@@ -179,7 +165,7 @@
             <svg class="about__item-image" width="35" height="34">
               <use xlink:href="#icon-feature-ball" />
             </svg>
-            <p class="about__item-content">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</p>
+            <p class="about__item-content">Связано вручную с любовью&nbsp;и&nbsp;умилением</p>
           </li>
           <li class="about__item">
             <svg class="about__item-image" width="55" height="23">
@@ -191,7 +177,7 @@
             <svg class="about__item-image" width="33" height="32">
               <use xlink:href="#icon-feature-gift" />
             </svg>
-            <p class="about__item-content">Доставляется в подарочной&nbsp;упаковке</p>
+            <p class="about__item-content">Поставляется в подарочной&nbsp;упаковке</p>
           </li>
         </ul>
       </div>
@@ -236,37 +222,38 @@
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
-        <h2 class="contacts__header">Контакты</h2>
-        <ul class="contacts__list">
-          <ul class="contacts__row">
-            <li class="contacts__cell contacts__option">e-mail:</li>
-            <li class="contacts__cell contacts__value">
-              <a href="mailto:info@mimimishkashop.ru" class="contacts__value-mail">info@mimimishkashop.ru</a>
-            </li>
-          </ul>
-          <ul class="contacts__row">
-            <li class="contacts__cell contacts__option">адрес:</li>
-            <li class="contacts__cell contacts__value">
-              <address class="contacts__value-address">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис
-                101</address>
+        <div class="contacts__content-wrapper">
+          <h2 class="contacts__header">Контакты</h2>
+          <ul class="contacts__list">
+            <ul class="contacts__row">
+              <li class="contacts__cell contacts__option">e-mail:</li>
+              <li class="contacts__cell contacts__value">
+                <a href="mailto:info@mimimishkashop.ru" class="contacts__value-mail">info@mimimishkashop.ru</a>
               </li>
+            </ul>
+            <ul class="contacts__row">
+              <li class="contacts__cell contacts__option">адрес:</li>
+              <li class="contacts__cell contacts__value">
+                <address class="contacts__value-address">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис
+                  101</address>
+              </li>
+            </ul>
           </ul>
-        </ul>
+        </div>
+        <div class="contacts__map-wrapper">
+          <!-- тут будет карта -->
+        </div>
+        <div class="contacts__button-wrapper">
+          <a class="contacts__button-contact">Напишите нам</a>
+        </div>
       </div>
-      <div class="contacts__map-wrapper">
-        <!-- тут будет карта -->
-      </div>
-      <div class="contacts__button-wrapper">
-        <a class="contacts__button-contact">Напишите нам</a>
-      </div>
-
     </section>
   </main>
 
   <footer class="page-footer">
     <p class="page-footer__logo">
       <svg class="page-footer__logo-image" width="102" height="34">
-        <use xlink:href="#logo-footer"/>
+        <use xlink:href="#logo-footer" />
       </svg>
     </p>
     <div class="page-footer__social">

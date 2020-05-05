@@ -1,12 +1,12 @@
-.contacts__wrapper {
+.contacts__content-wrapper {
   max-width: 500px;
-  padding: 43px 30px 0;
+  padding: 36px 29px 0;
   margin: 0 auto;
 }
 
 .contacts__header {
   margin: 0;
-  padding-bottom: 42px;
+  padding-bottom: 26px;
   .setFont(18px, black, 30px, @bold, left);
 }
 
@@ -14,8 +14,9 @@
   width: 100%;
   .setFont(15px, @dark-grey, 30px, @regular, left);
   .resetList();
-  display: table;
-  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 7px;
 }
 
 .contacts__value-mail,
@@ -27,12 +28,14 @@
 
 .contacts__row {
   .resetList();
-  display: table-row;
+  padding: 0;
+  padding-bottom: 30px;
+  display: flex;
+  flex-grow: 1;
 }
 
 .contacts__cell {
-  display: table-cell;
-  padding-bottom: 40px;
+  display: block;
 }
 
 .contacts__option {
@@ -40,7 +43,12 @@
 }
 
 .contacts__value {
-  padding-left: 31px;
+  padding-left: 30px;
+}
+
+.contacts__value-mail {
+border-bottom: 1px solid @green;
+padding-bottom: 4px;
 }
 
 .contacts__map-wrapper {
@@ -60,7 +68,7 @@
 
 .contacts__button-wrapper {
   width: 100%;
-  padding: 40px 30px;
+  padding: 39px 30px;
 }
 
 .contacts__button-contact {
@@ -69,7 +77,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
-  line-height: 50px;
+  line-height: 48px;
   text-align: center;
   color: @dark-grey;
   font-weight: @bold;
@@ -79,18 +87,23 @@
 @media (min-width: 768px) {
   .contacts {
     background: url("../img/bg-zigzag-line.svg") 0% 0% no-repeat;
-    background-size: 100%;
+    background-size: 100% 17px;
   }
 
-  .contacts__wrapper {
+  .contacts__content-wrapper {
     max-width: initial;
     width: 768px;
     margin: 0 auto;
+    padding-top: 66px;
+    padding-left: 46px;
+    padding-right: 53px;
   }
 
   .contacts__header {
     .setFont(43px, black, 81px, @bold, left);
     position: relative;
+    padding-bottom: 35px;
+
 
     &::after {
       content: "";
@@ -98,13 +111,15 @@
       width: 47px;
       height: 81px;
       right: 0;
-      background: url("../img/icon-flag.svg");
+      background: url("../img/icon-flag.svg") no-repeat;
     }
   }
 
   .contacts__list {
     display: flex;
     flex-direction: row;
+    padding-left: 4px;
+    padding-bottom: 55px;
   }
 
   .contacts__row {
@@ -113,8 +128,16 @@
     flex-grow: 1;
   }
 
+  .contacts__row:first-child {
+    padding-right: 18px;
+  }
+
   .contacts__cell {
     display: block;
+  }
+
+  .contacts__value {
+    padding-left: 21px;
   }
 
   .contacts__option,
@@ -143,8 +166,84 @@
     }
   }
 
+  .contacts__button-wrapper {
+    padding-top: 55px;
+    padding-bottom: 57px;
+  }
+
   .contacts__button-contact {
+    font-size: 17px;
     width: 230px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop) {
+
+  .contacts {
+    padding: 0 50px;
+    padding-top: 70px;
+    padding-bottom: 105px;
+    background: url("../img/bg-zigzag-line.svg") center 0 no-repeat;
+    background-size: 1050px 17px;
+  }
+
+
+  .contacts__wrapper {
+    position: relative;
+    width: 1050px;
+    margin: 0 auto;
+    padding-left: 175px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .contacts__content-wrapper {
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    padding-top: 63px;
+  }
+
+  .contacts__header {
+    .setFont(53px, black, 81px, @bold, left);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 81px;
+      left: -115px;
+      background: url("../img/icon-flag.svg") no-repeat;
+    }
+  }
+
+  .contacts__list {
+    flex-direction: column;
+  }
+
+  .contacts__map-wrapper {
+    width: 525px;
+    height: 457px;
+    background:
+      url("../img/map-desktop@1x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .contacts__map-wrapper {
+      background:
+        url("../img/map-desktop@2x.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .contacts__button-wrapper {
+    width: auto;
+    position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 175px;
   }
 }

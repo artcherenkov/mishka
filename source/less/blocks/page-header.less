@@ -14,7 +14,9 @@ menu-open--default - класс для кнопки, которая отобра
 
 .page-header__controls {
   margin: 0 auto;
-  padding: 22px 30px;
+  padding: 17px 30px;
+  padding-top: 22px;
+  padding-left: 116px;
   max-width: 500px;
   display: flex;
   justify-content: space-between;
@@ -24,6 +26,7 @@ menu-open--default - класс для кнопки, которая отобра
 
 .page-header__toggle {
   padding: 0;
+  padding-top: 0px;
   margin: 0;
   border: none;
   background-color: transparent;
@@ -137,6 +140,14 @@ menu-open--default - класс для кнопки, которая отобра
     position: relative;
   }
 
+  .page-header__nav-image {
+
+    &--cart {
+      left: 33px;
+      top: 35px;
+    }
+  }
+
   .page-header__nav-item {
     display: block;
 
@@ -158,8 +169,9 @@ menu-open--default - класс для кнопки, которая отобра
 
     &--search {
       order: 2;
-      line-height: 88px;
-      width: 82px;
+      padding-top: 5px;
+      line-height: 80px;
+      width: 80px;
       border: 1px solid @light-grey;
       border-top: none;
     }
@@ -174,13 +186,14 @@ menu-open--default - класс для кнопки, которая отобра
 
     &--cart a {
       line-height: 88px;
-      padding-right: 52px;
+      padding-left: 84px;
+      // padding-right: 52px;
     }
 
     &--catalog {
       position: absolute;
-      bottom: -30px;
-      left: 52px;
+      bottom: -40px;
+      left: 49px;
       order: 4;
     }
 
@@ -193,7 +206,7 @@ menu-open--default - класс для кнопки, которая отобра
     &--knitting {
       order: 5;
       position: absolute;
-      bottom: -30px;
+      bottom: -40px;
       left: 220px;
     }
 
@@ -205,7 +218,7 @@ menu-open--default - класс для кнопки, которая отобра
     &--shipping {
       order: 6;
       position: absolute;
-      bottom: -30px;
+      bottom: -40px;
       right: 52px;
     }
   }
@@ -215,6 +228,7 @@ menu-open--default - класс для кнопки, которая отобра
   }
 
   .page-header__nav-link {
+    font-size: 17px;
     line-height: normal;
     box-shadow: none;
   }
@@ -222,5 +236,114 @@ menu-open--default - класс для кнопки, которая отобра
   .page-header__nav-text {
     margin: 0;
     .setFont(15px, @dark-grey, 24px, @regular, right);
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header__nav {
+    padding: 0 50px;
+  }
+
+  .page-header__nav {
+    border-bottom: 1px solid @light-grey;
+  }
+
+  .page-header__controls {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .page-header__nav-item {
+    display: block;
+
+    &--catalog {
+      position: static;
+      // bottom: -30px;
+      // left: 52px;
+      order: 1;
+    }
+
+    &--catalog a {
+      padding: 0;
+      font-size: 15px;
+      line-height: 88px;
+      border-right: 1px solid @light-grey;
+      padding-right: 35px;
+    }
+
+    &--knitting {
+      order: 2;
+      position: static;
+      // bottom: -30px;
+      // left: 220px;
+    }
+
+    &--knitting a {
+      padding: 0;
+      font-size: 15px;
+      line-height: 88px;
+      padding-left: 35px;
+    }
+
+    &--logo {
+      order: 3;
+      width: 320px;
+      // line-height: 88px;
+      border-bottom: 1px solid @light-grey;
+      flex-grow: 1;
+    }
+
+    &--search {
+      order: 4;
+      line-height: 88px;
+      width: 82px;
+      border: 1px solid @light-grey;
+      border-top: none;
+    }
+
+    &--cart {
+      order: 5;
+      line-height: 88px;
+      border-bottom: 1px solid @light-grey;
+      min-width: 266px;
+    }
+
+    &--cart a {
+      line-height: 88px;
+       padding-right: 0;
+    }
+
+    &--shipping {
+      order: 6;
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+    }
+
+    &--new {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      order: 6;
+      display: block;
+      padding: 0;
+    }
+
+    &--new a {
+      padding: 0;
+    }
+
+    &--sale {
+      position: absolute;
+      bottom: -30px;
+      // left: 270px;
+      order: 7;
+      display: block;
+      padding: 0;
+    }
+
+    &--sale a {
+      padding-left: 220px;
+    }
   }
 }

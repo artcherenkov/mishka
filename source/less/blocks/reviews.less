@@ -6,7 +6,7 @@
 .reviews__wrapper {
   max-width: 500px;
   margin: 0 auto;
-  padding: 45px 30px;
+  padding: 45px 30px 50px;
   padding-top: 0;
 }
 
@@ -16,7 +16,7 @@
 
 .reviews__header {
   margin: 0;
-  padding-bottom: 37px;
+  padding-bottom: 25px;
   font-size: 25px;
   line-height: 30px;
   text-align: left;
@@ -26,7 +26,7 @@
 
 .reviews__item-content {
   margin: 0;
-  padding-bottom: 37px;
+  padding-bottom: 27px;
   font-size: 15px;
   line-height: 30px;
   text-align: left;
@@ -35,6 +35,7 @@
 
 .reviews__item-name {
   margin: 0;
+  padding-bottom: 2px;
   font-size: 17px;
   line-height: 24px;
   text-align: left;
@@ -44,7 +45,7 @@
 
 .reviews__item-insta {
   margin: 0;
-  padding-bottom: 33px;
+  padding-bottom: 29px;
   font-size: 17px;
   line-height: 30px;
   text-align: left;
@@ -55,25 +56,25 @@
 .reviews__toggles {
   width: 100%;
   display: flex;
-  padding-bottom: 37px;
+  padding-bottom: 38px;
 }
 
 .reviews__toggle {
   width: 50%;
-  padding: 13px 0;
+  padding: 12px 0 10px;
   margin: 0;
   border: 1px solid #ececec;
   background-color: white;
 
   &--left {
-    padding-left: 38px;
-    padding-right: 42px;
+    padding-left: 37px;
+    padding-right: 41px;
   }
 
   &--right {
     border-left: none;
     padding-right: 38px;
-    padding-left: 42px;
+    padding-left: 35px;
   }
 }
 
@@ -83,7 +84,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
-  line-height: 50px;
+  line-height: 48px;
   text-align: center;
   color: @dark-grey;
   font-weight: @bold;
@@ -92,7 +93,7 @@
 
 @media (min-width: @tablet) {
   .reviews {
-    padding-top: 85px;
+    padding-top: 77px;
     padding-bottom: 50px;
     margin-bottom: 60px;
     background: url("../img/review@1x.jpg") no-repeat;
@@ -114,7 +115,8 @@
     order: 1;
     .setFont(43px, black, 50px, @bold, left);
     padding: 0;
-    margin-bottom: 53px;
+    margin-bottom: 55px;
+    margin-left: -5px;
   }
 
   .reviews__button-send {
@@ -125,16 +127,25 @@
 
   .reviews__item-content {
     .setFont(17px, @dark-grey, 30px, @regular, left);
+    padding-bottom: 56px;
+  }
+
+  .reviews__item-name {
+    font-size: 18px;
+    padding-bottom: 4px;
   }
 
   .reviews__list {
+    margin-left: -1px;
+    margin-top: -5px;
+    padding-top: 0px;
     order: 3;
   }
 
   .reviews__toggles {
     width: 175px;
     position: absolute;
-    bottom: 0;
+    bottom: 14px;
     right: 50px;
     padding: 0;
   }
@@ -146,6 +157,43 @@
   }
 
   .reviews__item-insta {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .reviews {
+    margin: 0 50px;
+    background-image: none;
+  }
+
+  .reviews__wrapper {
+    background: url("../img/review@1x.jpg") no-repeat;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 175px;
+    padding-right: 0;
+    margin: 0 auto;
+    width: 1050px;
+    // width: 700px;
+    // margin: 0 auto;
+  }
+
+  .reviews__item-content {
+    margin: 0;
+    width: 790px;
+    padding-bottom: 37px;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: left;
+    color: @dark-grey;
+  }
+
+  .reviews__toggles {
+    width: 175px;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
     padding: 0;
   }
 }

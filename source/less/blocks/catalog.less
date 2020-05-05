@@ -100,3 +100,39 @@
     margin-top: auto;
   }
 }
+
+@media (min-width: @desktop) {
+.catalog__wrapper {
+  padding-top: 124px;
+  width: 1150px;
+  margin: 0 auto;
+}
+
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 57px;
+  }
+
+  .catalog__item {
+    margin: 0;
+    width: 316px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .catalog__item:not(:last-child) {
+    padding-bottom: 0;
+  }
+
+  .catalog__item-description {
+    margin-top: -5px;
+  }
+
+  .catalog__image {
+    min-width: 316px;
+    height: auto;
+  }
+}
