@@ -1,5 +1,5 @@
 .knitting {
-  padding: 30px 30px 55px;
+  padding: 22px 30px 55px;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -7,7 +7,7 @@
 .knitting__intro {
   margin: 0;
   .setFont(13px, @dark-grey, 24px, @regular, left);
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .knitting__part {
@@ -29,7 +29,7 @@
 
 .knitting__type-list {
   .resetList();
-  padding: 43px 0 51px;
+  padding: 34px 0 42px;
 }
 
 .knitting__type-item {
@@ -37,7 +37,7 @@
 }
 
 .knitting__type-item:not(:last-child) {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .knitting__color-header {
@@ -46,7 +46,7 @@
 
 .knitting__color-list {
   .resetList();
-  padding: 44px 0 49px;
+  padding: 25px 0 32px;
 }
 
 .knitting__color-item:not(:last-child) {
@@ -59,7 +59,7 @@
 
 .knitting__personal-list {
   .resetList();
-  padding: 33px 0 34px;
+  padding: 29px 0 31px;
 }
 
 .knitting__personal-item {
@@ -68,7 +68,7 @@
 }
 
 .knitting__personal-item:not(:last-child) {
-  padding-bottom: 24px;
+  padding-bottom: 22px;
 }
 
 .knitting__contact-header {
@@ -79,10 +79,35 @@
   }
 }
 
-
 .knitting__contact-input {
-  margin: 9px 0 34px;
+  margin: 7px 0 33px;
   width: 100%;
+}
+
+.knitting__contact-input-wrapper {
+  position: relative;
+}
+
+.knitting__contact-input-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  fill: black;
+
+  &--mail {
+    top: 18px;
+    right: 4px;
+  }
+
+  &--tel {
+    top: 18px;
+    right: 8px;
+  }
+}
+
+.knitting__extra-wrapper {
+  margin-top: -2px;
 }
 
 .knitting__extra-header {
@@ -90,7 +115,7 @@
 }
 
 .knitting__extra-input {
-  margin: 23px 0 18px;
+  margin: 25px 0 11px;
   width: 100%;
   height: 142px;
   border: 2px solid black;
@@ -108,7 +133,7 @@
   text-transform: uppercase;
   width: 260px;
   font-size: 17px;
-  line-height: 50px;
+  line-height: 48px;
   text-align: center;
   color: @dark-grey;
   font-weight: @bold;
@@ -125,7 +150,7 @@
   .knitting__intro {
     width: 768px;
     margin: 0 auto;
-    padding: 68px 50px 15px 50px;
+    padding: 67px 50px 15px 50px;
     .setFont(17px, @dark-grey, 30px, @regular, left);
   }
 
@@ -155,13 +180,60 @@
     background-color: #f1f1f1;
   }
 
+  .knitting__type-header {
+    top: 58px;
+    left: 51px;
+  }
+
+  .knitting__type-list {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .knitting__type-item:not(:last-child) {
+    padding-bottom: 23px;
+  }
+
+  .knitting__color-header {
+    top: 67px;
+    left: 51px;
+  }
+
   .knitting__color-list {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 48px;
+    padding-bottom: 28px;
   }
 
-  .knitting__color-item {
-    width: 50%;
+//чтобы усилить вес селектора
+  .knitting__color-item,
+  .knitting__color-item:not(:last-child) {
+    width: 40%;
+    padding-bottom: 24px;
+  }
+
+  .knitting__color-item:nth-child(2n) {
+    margin-left: 62px;
+  }
+
+  .knitting__personal-header {
+    top: 67px;
+    left: 51px;
+  }
+
+  .knitting__personal-list {
+    padding-top: 47px;
+    padding-bottom: 50px;
+  }
+
+  .knitting__personal-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .knitting__personal-item:not(:last-child) {
+    padding-bottom: 21px;
   }
 
   .knitting__personal-label {
@@ -173,7 +245,52 @@
 
   .knitting__personal-input {
     flex-grow: 1;
+    margin-top: 3px;
     padding-left: 18px;
+  }
+
+  .knitting__contact-header {
+    top: 24px;
+    left: 51px;
+  }
+
+  .knitting__contact-wrapper {
+    padding-top: 43px;
+    padding-bottom: 33px;
+  }
+
+  .knitting__contact-input {
+    margin-bottom: 17px;
+    padding-left: 17px;
+  }
+
+  .knitting__contact-input-icon {
+    &--mail {
+      top: 18px;
+      right: 22px;
+    }
+
+    &--tel {
+      top: 18px;
+      right: 26px;
+    }
+  }
+
+  .knitting__extra {
+    padding-bottom: 0px;
+  }
+
+  .knitting__extra-header {
+    top: 43px;
+    left: 51px;
+  }
+
+  .knitting__extra-wrapper {
+    padding-top: 26px;
+  }
+
+  .knitting__extra-input {
+    margin-bottom: 0;
   }
 
   .knitting__controls {
@@ -181,6 +298,7 @@
     margin: 0 auto;
     display: flex;
     padding: 50px;
+    padding-bottom: 49px;
     justify-content: space-between;
     align-items: center;
   }
@@ -192,8 +310,10 @@
 
   .knitting__note {
     order: 2;
-    line-height: 52px;
+    line-height: 30px;
+    font-size: 17px;
     padding: 0;
+    padding-bottom: 4px;
   }
 }
 
@@ -203,10 +323,21 @@
     max-width: initial;
   }
 
-  .knitting__intro {
-    width: 675px;
+  .knitting__intro-wrapper {
+    width: 1150px;
+    padding: 0 225px;
     margin: 0 auto;
-    padding: 68px 0 15px;
+  }
+
+  .knitting__intro {
+    // margin-left: -12px;
+    // padding: 68px 0 15px;
+    margin: 0;
+    width: auto;
+     padding-left: 0;
+    padding-right: 0;
+    padding-top: 105px;
+    padding-bottom: 25px;
     .setFont(17px, @dark-grey, 30px, @regular, left);
   }
 
@@ -229,7 +360,6 @@
   .knitting__contact-item,
   .knitting__extra-item {
     width: 1050px;
-
     padding: 30px 175px;
   }
 
@@ -238,13 +368,31 @@
     background-color: #f1f1f1;
   }
 
+  .knitting__type-list {
+    // padding-top: 34px;
+    padding-bottom: 49px;
+  }
+
   .knitting__color-list {
+    padding-top: 49px;
+    padding-bottom: 27px;
+    padding-right: 0;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .knitting__color-item {
+  .knitting__color-item,
+  .knitting__color-item:not(:last-child) {
     width: 30%;
+  }
+
+  .knitting__color-item:nth-child(2n) {
+    margin: 0;
+  }
+
+  .knitting__personal-list {
+    padding-top: 48px;
+    padding-bottom: 49px;
   }
 
   .knitting__personal-label {
@@ -259,11 +407,52 @@
     padding-left: 18px;
   }
 
+  .knitting__contact-wrapper {
+    padding-top: 43px;
+  }
+
+  .knitting__contact-input {
+    margin-bottom: 0;
+  }
+
+  //чтобы усилить селектор
+  // .knitting__contact-item,
+  // .knitting__contact-item:not(:last-child) {
+  //   padding-bottom: 10px;
+  // }
+
+  .knitting__contact-item,
+  .knitting__contact-item:last-child {
+    padding-top: 0px;
+    padding-bottom: 17px;
+  }
+
+  .knitting__contact-input-icon {
+    &--mail {
+      top: 18px;
+      right: 4px;
+    }
+
+    &--tel {
+      top: 18px;
+      right: 8px;
+    }
+  }
+
+  .knitting__extra-wrapper {
+    padding-top: 0;
+  }
+
+  .knitting__extra-item {
+    padding-top: 27px;
+  }
+
   .knitting__controls {
     width: 700px;
     margin: 0 auto;
     display: flex;
     padding: 50px 0;
+    padding-top: 14px;
     justify-content: space-between;
     align-items: center;
   }
