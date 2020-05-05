@@ -186,6 +186,7 @@ menu-open--default - класс для кнопки, которая отобра
     &--cart a {
       line-height: 88px;
       padding-left: 84px;
+      font-size: 17px;
       // padding-right: 52px;
     }
 
@@ -227,7 +228,6 @@ menu-open--default - класс для кнопки, которая отобра
   }
 
   .page-header__nav-link {
-    font-size: 17px;
     line-height: normal;
     box-shadow: none;
   }
@@ -249,19 +249,22 @@ menu-open--default - класс для кнопки, которая отобра
     justify-content: center;
   }
 
+  .page-header__logo-image {
+    width: 149px;
+    height: 72px;
+  }
+
   .page-header__nav-item {
     display: block;
 
     &--catalog {
       position: static;
-      // bottom: -30px;
-      // left: 52px;
       order: 1;
     }
 
     &--catalog a {
       padding: 0;
-      font-size: 15px;
+      font-size: 17px;
       line-height: 88px;
       border-right: 1px solid @light-grey;
       padding-right: 35px;
@@ -270,13 +273,11 @@ menu-open--default - класс для кнопки, которая отобра
     &--knitting {
       order: 2;
       position: static;
-      // bottom: -30px;
-      // left: 220px;
     }
 
     &--knitting a {
       padding: 0;
-      font-size: 15px;
+      font-size: 17px;
       line-height: 88px;
       padding-left: 35px;
     }
@@ -287,6 +288,11 @@ menu-open--default - класс для кнопки, которая отобра
       // line-height: 88px;
       border-bottom: 1px solid @light-grey;
       flex-grow: 1;
+    }
+
+    &--logo a {
+      padding-top: 8px;
+      margin-left: -26px;
     }
 
     &--search {
@@ -307,32 +313,34 @@ menu-open--default - класс для кнопки, которая отобра
     &--cart a {
       line-height: 88px;
       padding-right: 0;
+      font-size: 17px;
     }
 
     &--shipping {
       order: 6;
       position: absolute;
-      bottom: -30px;
+      bottom: -40px;
       right: 0;
     }
 
     &--new {
       position: absolute;
-      bottom: -30px;
+      bottom: -40px;
       left: 0;
       order: 6;
       display: block;
+
       padding: 0;
     }
 
     &--new a {
       padding: 0;
+      font-size: 15px;
     }
 
     &--sale {
       position: absolute;
-      bottom: -30px;
-      // left: 270px;
+      bottom: -40px;
       order: 7;
       display: block;
       padding: 0;
@@ -340,6 +348,7 @@ menu-open--default - класс для кнопки, которая отобра
 
     &--sale a {
       padding-left: 220px;
+      font-size: 15px;
     }
   }
 }

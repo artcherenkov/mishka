@@ -8,10 +8,10 @@
 .process__header {
   margin: 0;
   position: relative;
-  padding-top: 29px;
-  padding-bottom: 26px;
+  padding-top: 23px;
+  padding-bottom: 24px;
   padding-right: 43px;
-  padding-left: 91px;
+  padding-left: 89px;
   .setFont(17px, black, 24px, @bold, left);
   border: 1px solid @light-grey;
   border-bottom: 0;
@@ -20,7 +20,7 @@
 .process__header-image {
   position: absolute;
   left: 34px;
-  top: 25%;
+  top: 30px;
   fill: @green;
 }
 
@@ -49,7 +49,7 @@
   margin-top: -5px;
   border: 1px solid @light-grey;
   border-top: none;
-  padding: 34px 34px 29px;
+  padding: 27px 34px 32px;
 }
 
 .process__intro {
@@ -63,8 +63,8 @@
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 18px;
-  line-height: 50px;
+  font-size: 17px;
+  line-height: 48px;
   text-align: center;
   color: @dark-grey;
   font-weight: @bold;
@@ -72,15 +72,12 @@
 }
 
 @media (min-width: @tablet) {
-  .process {
-    padding: 0 50px;
-  }
-
   .process__wrapper {
     max-width: initial;
-    width: 668px;
+    width: 768px;
+    padding: 0 50px;
     margin: 0 auto;
-    padding: 0;
+    // padding: 0;
     padding-bottom: 63px;
     display: flex;
     flex-direction: column;
@@ -94,42 +91,73 @@
     order: 2;
     .setFont(20px, black, 24px, @bold, left);
     margin-top: -5px;
+    padding-top: 37px;
+    padding-left: 104px;
+    padding-bottom: 37px;
+  }
+
+  .process__header-image {
+    top: 32px;
+    left: 41px;
   }
 
   .process__content-wrapper {
     order: 3;
     padding-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 45px;
   }
 
   .process__intro {
     .setFont(15px, @dark-grey, 30px, @regular, left);
+    padding-bottom: 35px;
   }
 }
 
 @media (min-width: @desktop) {
   .process__wrapper {
     position: relative;
-    width: 1050px;
+    width: 1150px;
+    padding-bottom: 105px;
     flex-direction: column;
     align-items: flex-end;
   }
 
   .process__header {
     width: 368px;
+    padding-top: 96px;
+    padding-right: 50px;
+    padding-left: 77px;
     height: 100px;
     margin: 0;
   }
 
+  .process__header-image {
+    top: 41px;
+    left: 79px;
+  }
+
   .process__content-wrapper {
     width: 368px;
-    height: 355px;
+    padding-left: 77px;
+    padding-top: 48px;
+  }
+
+  .process__intro {
+    padding-bottom: 45px;
+  }
+
+  .process__make-order {
+    margin-left: 2px;
+    padding-left: 0;
+    width: 230px;
+    margin-bottom: 15px;
   }
 
   .process__video {
     width: 682px;
-    // top: -5px;
-    left: 0;
-    // display: none;
+    left: 50px;
     position: absolute;
   }
 }
