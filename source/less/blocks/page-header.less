@@ -1,0 +1,345 @@
+/*
+Логика поведения меню.
+- Выключенный js: все элементы меню в потоке
+- Включенный js закрытое меню: в потоке только первый элемент меню
+- Включенный js открытое меню: в потоке все элементы
+
+За открытое меню отвечает класс menu-open. Если он присутствует, все меню находится в потоке. Если нет - только первый элемент.
+
+menu-open--default - класс для кнопки, которая отображается, если этот класс назначен. Если класс menu-open, то отображается крестик, если ни одного класс - бургер
+*/
+.page-header {
+  width: 100%;
+}
+
+.page-header__controls {
+  margin: 0 auto;
+  padding: 17px 30px;
+  padding-top: 22px;
+  padding-left: 116px;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+}
+
+.page-header__toggle {
+  padding: 0;
+  padding-top: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.page-header__toggle-image {
+  display: block;
+
+  &--close {
+    display: none;
+  }
+}
+
+.page-header__toggle.menu-open .page-header__toggle-image {
+  display: none;
+
+  &--close {
+    display: block;
+  }
+}
+
+.page-header__toggle.menu-open--default {
+  display: none;
+}
+
+.page-header__nav-list {
+  display: flex;
+  flex-direction: column;
+  .resetList();
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+}
+
+.page-header__nav-item {
+  display: none;
+}
+
+.page-header__nav-item:first-child {
+  display: block;
+}
+
+.page-header__nav.menu-open .page-header__nav-item {
+  display: block;
+
+  &--not-mobile {
+    display: none;
+  }
+}
+
+.page-header__nav-link {
+  display: block;
+  padding-left: 75px;
+  position: relative;
+  line-height: 79px;
+  text-align: left;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  font-weight: @bold;
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+}
+
+.page-header__nav-image {
+  position: absolute;
+  top: 31px;
+  left: 30px;
+  opacity: 0.2;
+}
+
+@media (min-width: @tablet) {
+  .page-header {
+    display: flex;
+  }
+
+  .page-header__logo-image {
+    width: 112px;
+    height: 46px;
+  }
+
+  .page-header__logo-link {
+    padding-top: 22px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__toggle-image {
+    display: none;
+  }
+
+  .page-header__controls {
+    // min-width: 372px;
+    max-width: initial;
+    box-shadow: none;
+    padding: 0;
+    padding-left: 50px;
+  }
+
+  .page-header__nav {
+    display: flex;
+    position: static;
+    width: 100%;
+  }
+
+  .page-header__nav-list {
+    // padding: 0 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .page-header__nav-image {
+    &--cart {
+      left: 33px;
+      top: 35px;
+    }
+  }
+
+  .page-header__nav-item {
+    display: block;
+
+    &--new {
+      display: none;
+    }
+
+    &--sale {
+      display: none;
+    }
+
+    &--logo {
+      order: 1;
+      width: 320px;
+      // line-height: 88px;
+      border-bottom: 1px solid @light-grey;
+      flex-grow: 1;
+    }
+
+    &--search {
+      order: 2;
+      padding-top: 5px;
+      line-height: 80px;
+      width: 80px;
+      border: 1px solid @light-grey;
+      border-top: none;
+    }
+
+    &--cart {
+      order: 3;
+      width: 264px;
+      line-height: 88px;
+      border-bottom: 1px solid @light-grey;
+      min-width: 316px;
+    }
+
+    &--cart a {
+      line-height: 88px;
+      padding-left: 84px;
+      // padding-right: 52px;
+    }
+
+    &--catalog {
+      position: absolute;
+      bottom: -40px;
+      left: 49px;
+      order: 4;
+    }
+
+    &--catalog a {
+      padding: 0;
+      font-size: 15px;
+    }
+
+
+    &--knitting {
+      order: 5;
+      position: absolute;
+      bottom: -40px;
+      left: 220px;
+    }
+
+    &--knitting a {
+      padding: 0;
+      font-size: 15px;
+    }
+
+    &--shipping {
+      order: 6;
+      position: absolute;
+      bottom: -40px;
+      right: 52px;
+    }
+  }
+
+  .page-header__search-text {
+    display: none;
+  }
+
+  .page-header__nav-link {
+    font-size: 17px;
+    line-height: normal;
+    box-shadow: none;
+  }
+
+  .page-header__nav-text {
+    margin: 0;
+    .setFont(15px, @dark-grey, 24px, @regular, right);
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header__nav {
+    padding: 0 50px;
+    border-bottom: 1px solid @light-grey;
+  }
+
+  .page-header__controls {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .page-header__nav-item {
+    display: block;
+
+    &--catalog {
+      position: static;
+      // bottom: -30px;
+      // left: 52px;
+      order: 1;
+    }
+
+    &--catalog a {
+      padding: 0;
+      font-size: 15px;
+      line-height: 88px;
+      border-right: 1px solid @light-grey;
+      padding-right: 35px;
+    }
+
+    &--knitting {
+      order: 2;
+      position: static;
+      // bottom: -30px;
+      // left: 220px;
+    }
+
+    &--knitting a {
+      padding: 0;
+      font-size: 15px;
+      line-height: 88px;
+      padding-left: 35px;
+    }
+
+    &--logo {
+      order: 3;
+      width: 320px;
+      // line-height: 88px;
+      border-bottom: 1px solid @light-grey;
+      flex-grow: 1;
+    }
+
+    &--search {
+      order: 4;
+      line-height: 88px;
+      width: 82px;
+      border: 1px solid @light-grey;
+      border-top: none;
+    }
+
+    &--cart {
+      order: 5;
+      line-height: 88px;
+      border-bottom: 1px solid @light-grey;
+      min-width: 266px;
+    }
+
+    &--cart a {
+      line-height: 88px;
+      padding-right: 0;
+    }
+
+    &--shipping {
+      order: 6;
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+    }
+
+    &--new {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      order: 6;
+      display: block;
+      padding: 0;
+    }
+
+    &--new a {
+      padding: 0;
+    }
+
+    &--sale {
+      position: absolute;
+      bottom: -30px;
+      // left: 270px;
+      order: 7;
+      display: block;
+      padding: 0;
+    }
+
+    &--sale a {
+      padding-left: 220px;
+    }
+  }
+}

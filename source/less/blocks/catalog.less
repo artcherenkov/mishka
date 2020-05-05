@@ -1,0 +1,138 @@
+.catalog__wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.catalog__list {
+  .resetList();
+  // padding: 30px 0;
+}
+
+.catalog__item:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.catalog__image-link {
+  display: block;
+}
+
+.catalog__image {
+  width: 100%;
+  height: auto;
+}
+
+.catalog__item-description {
+  margin-top: -5px;
+  border: solid 1px #ececec;
+  padding: 31px 28px 30px 28px;
+}
+
+.catalog__item-header {
+  margin: 0;
+  .setFont(17px, black, 24px, @bold, left);
+}
+
+.catalog__item-about {
+  margin: 0;
+  // margin-right: 28px;
+  padding-bottom: 15px;
+  .setFont(13px, @dark-grey, 30px, @regular, left);
+  border-bottom: 1px solid @light-grey;
+}
+
+.catalog__item-buy {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__item-price {
+  margin: 0;
+  .setFont(15px, black, 24px, @bold, left);
+}
+
+.catalog__item-add {
+  display: block;
+}
+
+.catalog__item-add-image {
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet) {
+  .catalog__wrapper {
+    padding: 0 50px;
+    max-width: initial;
+  }
+
+  .catalog__item {
+    width: 668px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .catalog__item:not(:last-child) {
+    padding-bottom: 54px;
+  }
+
+  .catalog__image {
+    min-width: 334px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .catalog__item-about {
+    border: none;
+  }
+
+  .catalog__item-description {
+    margin: 0;
+    padding: 29px 33px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalog__item-buy {
+    border-top: 1px solid @light-grey;
+    margin-top: auto;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog__wrapper {
+    padding-top: 124px;
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 57px;
+  }
+
+  .catalog__item {
+    margin: 0;
+    width: 316px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .catalog__item:not(:last-child) {
+    padding-bottom: 0;
+  }
+
+  .catalog__item-description {
+    margin-top: -5px;
+  }
+
+  .catalog__image {
+    min-width: 316px;
+    height: auto;
+  }
+}
