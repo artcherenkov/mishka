@@ -26,6 +26,16 @@
   font-style: normal;
 }
 
+.contacts__value-mail {
+  &:hover {
+    color: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .contacts__row {
   .resetList();
   padding: 0;
@@ -52,9 +62,14 @@
 }
 
 .contacts__map-wrapper {
-  height: 457px;
   background: url("../img/map-mobile@1x.jpg") no-repeat;
   background-size: cover;
+}
+
+.contacts__map {
+  width: 100%;
+  border: none;
+  margin-bottom: -5px;
 }
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -80,6 +95,17 @@
   color: @dark-grey;
   font-weight: @bold;
   border: 2px solid @dark-grey;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @dark-grey;
+    color: white
+  }
+
+  &:active {
+    background-color: @dark-grey;
+    color: rgba(255, 255, 255, 0.3)
+  }
 }
 
 @media (min-width: 768px) {
@@ -176,14 +202,18 @@
 
 @media (min-width: @desktop) {
   .contacts {
-    padding: 0 50px;
-    padding-top: 91px;
+    padding-top: 0;
     padding-bottom: 105px;
-    background: url("../img/bg-zigzag-line.svg") center 0 no-repeat;
-    background-size: 1050px 17px;
+    background-image: none;
+    // background-size: 1050px 17px;
   }
 
   .contacts__wrapper {
+    background: url("../img/bg-zigzag-line.svg") center 0 no-repeat;
+    // background-size: 1050px 17px;
+    padding: 0 50px;
+    padding-right: 0;
+    padding-top: 91px;
     position: relative;
     width: 1050px;
     margin: 0 auto;

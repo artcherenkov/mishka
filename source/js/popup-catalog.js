@@ -1,16 +1,15 @@
 var popup = document.querySelector(".popup");
 var page_opacity = document.querySelector(".page-opacity");
-var button_order = document.querySelector(".product-of-the-week__buy");
 var popup_button = document.querySelector(".popup__button-add");
+var button_add_to_cart = document.querySelector(".catalog__item-add");
 
 var popupY = popup.offsetTop - 40;
 
-button_order.addEventListener("click", function (e) {
-  e.preventDefault();
+function showPopup () {
   popup.classList.remove("visually-hidden");
   page_opacity.classList.remove("visually-hidden");
   // Scroll(popupY);
-});
+}
 
 popup_button.addEventListener("click", function (e) {
   e.preventDefault();

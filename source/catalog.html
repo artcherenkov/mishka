@@ -100,7 +100,7 @@
               <p class="catalog__item-about">Рост 30 см, вес 200 г</p>
               <div class="catalog__item-buy">
                 <p class="catalog__item-price">1 200 руб.</p>
-                <a class="catalog__item-add">
+                <a class="catalog__item-add" onclick="showPopup()">
                   <svg class="catalog__item-add-image" width="20" height="19">
                     <use xlink:href="#icon-cart" />
                   </svg>
@@ -132,7 +132,7 @@
               <div class="catalog__item-buy">
 
                 <p class="catalog__item-price">690 руб.</p>
-                <a class="catalog__item-add">
+                <a class="catalog__item-add" onclick="showPopup()">
                   <svg class="catalog__item-add-image" width="20" height="19">
                     <use xlink:href="#icon-cart" />
                   </svg>
@@ -162,7 +162,7 @@
               <p class="catalog__item-about">Диаметр 30 см, высота 30 см</p>
               <div class="catalog__item-buy">
                 <p class="catalog__item-price">1 500 руб.</p>
-                <a class="catalog__item-add">
+                <a class="catalog__item-add" onclick="showPopup()">
                   <svg class="catalog__item-add-image" width="20" height="19">
                     <use xlink:href="#icon-cart" />
                   </svg>
@@ -243,6 +243,18 @@
       </a>
     </p>
   </footer>
+  <section class="popup popup--catalog visually-hidden">
+    <h3 class="popup__header">Добавить в корзину</h3>
+    <p class="popup__size">Выберите размер:</p>
+    <ul class="popup__sizes">
+      <li class="popup__sizes-item popup__sizes-item--active">S</li>
+      <li class="popup__sizes-item">M</li>
+      <li class="popup__sizes-item">L</li>
+    </ul>
+    <a href="#" class="popup__button-add">Добавить</a>
+  </section>
+  <div class="page-opacity visually-hidden"></div>
+  <script src="js/popup-catalog.js"></script>
   <script>
     var toggle = document.querySelector(".page-header__toggle");
     var DOM = [
@@ -261,7 +273,6 @@
         element.classList.toggle("menu-open");
       });
     });
-
   </script>
 </body>
 

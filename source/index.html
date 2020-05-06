@@ -136,7 +136,6 @@
             <a href="#" class="product-of-the-week__buy">Заказать</a>
           </div>
         </div>
-
       </div>
     </section>
     <section class="about">
@@ -188,7 +187,9 @@
         <h2 class="reviews__header">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item">
-            <p class="reviews__item-content">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__item-content">Я молодая мама, но всё равно фотографии не набирали и близко такого
+              количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+              и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <h4 class="reviews__item-name">Анастасия Красильникова</h4>
             <p class="reviews__item-insta">@misssssiskras</p>
           </li>
@@ -239,21 +240,21 @@
           </ul>
         </div>
         <div class="contacts__map-wrapper">
-          <!-- тут будет карта -->
+          <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A74649a110e15b255c135e9b5e82f65d027b6b9bb0d96a6ccb3ef803593cb38d9&amp;source=constructor" width="320" height="457"></iframe>
         </div>
         <div class="contacts__button-wrapper">
-          <a class="contacts__button-contact">Напишите нам</a>
+          <a href="#" class="contacts__button-contact">Напишите нам</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <p class="page-footer__logo">
+    <a href="index.html" class="page-footer__logo">
       <svg class="page-footer__logo-image" width="102" height="34">
         <use xlink:href="#logo-footer" />
       </svg>
-    </p>
+    </a>
     <div class="page-footer__social">
       <p class="page-footer__social-list">
         <a href="instagram.com" class="page-footer__social-link">
@@ -273,27 +274,26 @@
         </a>
       </p>
     </div>
-    <p class="page-footer__copyright-text">Разработано
-      <a href="htmlacademy.ru" class="page-footer__copyright-link">
+    <a href="htmlacademy.ru" class="page-footer__copyright-text">Разработано
+      <!-- <a  class="page-footer__copyright-link"> -->
         <svg class="page-footer__copyright-image" width="27" height="34">
           <use xlink:href="#logo-htmlacademy" />
         </svg>
-      </a>
-    </p>
+      <!-- </a> -->
+    </a>
   </footer>
 
-<!-- visually-hidden -->
-  <section class="popup popup--add-to-cart">
-      <h3 class="popup__header">Добавить в корзину</h3>
-      <p class="popup__size">Выберите размер:</p>
-      <ul class="popup__sizes">
-        <li class="popup__sizes-item popup__sizes-item--active">S</li>
-        <li class="popup__sizes-item">M</li>
-        <li class="popup__sizes-item">L</li>
-      </ul>
-      <a href="#" class="popup__button-add">Добавить</a>
+  <section class="popup popup--add-to-cart visually-hidden">
+    <h3 class="popup__header">Добавить в корзину</h3>
+    <p class="popup__size">Выберите размер:</p>
+    <ul class="popup__sizes">
+      <li class="popup__sizes-item popup__sizes-item--active">S</li>
+      <li class="popup__sizes-item">M</li>
+      <li class="popup__sizes-item">L</li>
+    </ul>
+    <a href="#" class="popup__button-add">Добавить</a>
   </section>
-  <div class="page-opacity"></div>
+  <div class="page-opacity visually-hidden"></div>
 
   <script src="js/popup.js"></script>
 
@@ -315,7 +315,6 @@
         element.classList.toggle("menu-open");
       });
     });
-
   </script>
 
 </body>

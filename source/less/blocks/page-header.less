@@ -24,12 +24,23 @@ menu-open--default - класс для кнопки, которая отобра
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
 }
 
+.page-header__logo-link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .page-header__toggle {
   padding: 0;
   padding-top: 0;
   margin: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .page-header__toggle-image {
@@ -77,24 +88,38 @@ menu-open--default - класс для кнопки, которая отобра
   }
 }
 
+.page-header__nav-image {
+  position: absolute;
+  top: 31px;
+  left: 30px;
+  opacity: 0.2;
+}
+
 .page-header__nav-link {
   display: block;
   padding-left: 75px;
   position: relative;
   line-height: 79px;
+  font-size: 17px;
   text-align: left;
   width: 100%;
   text-decoration: none;
   color: black;
   font-weight: @bold;
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
-}
 
-.page-header__nav-image {
-  position: absolute;
-  top: 31px;
-  left: 30px;
-  opacity: 0.2;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:hover svg {
+    fill: @green;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -347,7 +372,8 @@ menu-open--default - класс для кнопки, которая отобра
     }
 
     &--sale a {
-      padding-left: 220px;
+      padding: 0;
+      left: 220px;
       font-size: 15px;
     }
   }
