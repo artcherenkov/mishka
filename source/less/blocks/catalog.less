@@ -10,6 +10,8 @@
 }
 
 .catalog__item {
+  margin-bottom: 30px;
+
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
@@ -19,8 +21,8 @@
   }
 }
 
-.catalog__item:not(:last-child) {
-  margin-bottom: 30px;
+.catalog__item:last-child {
+  margin-bottom: 0;
 }
 
 .catalog__image-link {
@@ -105,11 +107,6 @@
   .catalog__item {
     display: flex;
     flex-grow: 1;
-    // flex-wrap: wrap;
-  }
-
-  .catalog__item:last-child,
-  .catalog__item {
     margin-bottom: 49px;
   }
 
