@@ -2,6 +2,28 @@
   height: 52px;
   border: none;
   border-bottom: 2px solid black;
+  .setFont(19px, @dark-grey, 18px, @regular, left);
+
+  &:hover {
+    border-bottom-color: @green;
+  }
+
+  &:focus {
+    border-bottom-color: @green;
+  }
+}
+
+.input__textarea {
+  .setFont(19px, @dark-grey, 18px, @regular, left);
+  padding: 10px;
+
+  &:hover {
+    border-color: @green;
+  }
+
+  &:focus {
+    border-color: @green;
+  }
 }
 
 .input__text-label {
@@ -17,12 +39,18 @@
 
 .input__check {
   position: absolute;
-  width: 34px;
-  height: 34px;
-  appearance: none;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  left: -9999px;
 
   &:focus + .input__check-label::before {
-    border: 2px solid red;
+    border: 2px solid @green;
+  }
+
+  &:disabled + .input__check-label,
+  &:disabled + .input__check-label::before {
+    opacity: 0.5;
   }
 
   &:checked + .input__check-label::after {
@@ -49,7 +77,7 @@
     width: 40px;
     height: 39px;
     background-size: 22px 16px;
-    border: 2px solid black;
+    border: 2px solid @dark-grey;
     background-color: #ffffff;
   }
 
@@ -59,6 +87,7 @@
 
   &:active::before {
     border: 2px solid @dark-grey;
+    opacity: 0.3;
   }
 
   &::after {
@@ -81,7 +110,12 @@
   left: 0;
 
   &:focus + .input__radio-label::before {
-    border: 2px solid red;
+    border: 2px solid @green;
+  }
+
+  &:disabled + .input__radio-label,
+  &:disabled + .input__radio-label::before {
+    opacity: 0.5;
   }
 
   &:checked + .input__radio-label::after {
@@ -120,6 +154,7 @@
 
   &:active::before {
     border: 2px solid @dark-grey;
+    opacity: 0.3;
   }
 
   &::after {
@@ -136,12 +171,8 @@
 
 .input__text::placeholder,
 .input__textarea::placeholder {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Tahoma", sans-serif;
   .setFont(17px, rgba(@dark-grey-rgb, 0.3), 18px, @regular, left);
-}
-
-.input__textarea::placeholder {
-  padding: 10px;
 }
 
 @media (min-width: @tablet) {
@@ -211,6 +242,12 @@
 
   .input__text {
     background-color: transparent;
+  }
+
+  .input__text,
+  .input__textarea {
+    font-family: "Open Sans", sans-serif;
+    .setFont(19px, @dark-grey, 18px, @regular, left);
   }
 
   .input__text::placeholder,

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип Mishka" width="86" height="35">
               </picture>
             </a>
-            <button type="button" class="page-header__toggle menu-open menu-open--default">
+            <button type="button" class="page-header__toggle menu-open menu-open--default" aria-label="Открыть/закрыть главное меню">
               <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
                 <use xlink:href="#icon-menu-open" />
               </svg>
@@ -33,14 +34,14 @@
           </div>
         </li>
         <li class="page-header__nav-item page-header__nav-item--catalog">
-          <a href="catalog.html" class="page-header__nav-link">Каталог товаров</a>
+          <a class="page-header__nav-link">Каталог товаров</a>
         </li>
         <li class="page-header__nav-item page-header__nav-item--knitting">
           <a href="form.html" class="page-header__nav-link">Вязание на заказ</a>
         </li>
         <li class="page-header__nav-item page-header__nav-item--search">
           <a href="#" class="page-header__nav-link">
-            <svg class="page-header__nav-image page-header__nav-image--search" width="18" height="18">
+            <svg class="page-header__nav-image page-header__nav-image--search" width="18" height="18" alt="Поиск по сайту">
               <use xlink:href="#icon-search" />
             </svg>
             <span class="page-header__search-text">Поиск по сайту</span>
@@ -96,11 +97,11 @@
               </picture>
             </a>
             <div class="catalog__item-description">
-              <h3 class="catalog__item-header">Зайчик-попрыгайчик</h3>
+              <a href="#" class="catalog__item-header">Зайчик-попрыгайчик</a>
               <p class="catalog__item-about">Рост 30 см, вес 200 г</p>
               <div class="catalog__item-buy">
                 <p class="catalog__item-price">1 200 руб.</p>
-                <a class="catalog__item-add">
+                <a href="#" class="catalog__item-add" onclick="showPopup()" aria-label="Добавить в корзину">
                   <svg class="catalog__item-add-image" width="20" height="19">
                     <use xlink:href="#icon-cart" />
                   </svg>
@@ -127,12 +128,12 @@
               </picture>
             </a>
             <div class="catalog__item-description">
-              <h3 class="catalog__item-header">Корзинка для белья</h3>
+              <a href="#" class="catalog__item-header">Корзинка для белья</a>
               <p class="catalog__item-about">Диаметр 15 см, высота 10 см</p>
               <div class="catalog__item-buy">
 
                 <p class="catalog__item-price">690 руб.</p>
-                <a class="catalog__item-add">
+                <a href="#" class="catalog__item-add" onclick="showPopup()" aria-label="Добавить в корзину">
                   <svg class="catalog__item-add-image" width="20" height="19">
                     <use xlink:href="#icon-cart" />
                   </svg>
@@ -158,11 +159,11 @@
               </picture>
             </a>
             <div class="catalog__item-description">
-              <h3 class="catalog__item-header">Большая корзинка для&nbsp;игрушек</h3>
+              <a href="#" class="catalog__item-header">Большая корзинка для&nbsp;игрушек</a>
               <p class="catalog__item-about">Диаметр 30 см, высота 30 см</p>
               <div class="catalog__item-buy">
                 <p class="catalog__item-price">1 500 руб.</p>
-                <a class="catalog__item-add">
+                <a href="#" class="catalog__item-add" onclick="showPopup()" aria-label="Добавить в корзину">
                   <svg class="catalog__item-add-image" width="20" height="19">
                     <use xlink:href="#icon-cart" />
                   </svg>
@@ -181,7 +182,7 @@
           </svg>Процесс производства
         </h2>
         <div class="process__video">
-          <div href="#" class="process__video-wrapper">
+          <div class="process__video-wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
                 srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
@@ -194,7 +195,7 @@
               <img class="process__video-poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
                 width="260" height="150" alt="Видео">
             </picture>
-            <a href="#" class="process__video-link">
+            <a href="#" class="process__video-link" aria-label="Воспроизвести видео">
               <svg class="process__video-play" width="101" height="77">
                 <use xlink:href="#icon-play"/>
               </svg>
@@ -211,58 +212,51 @@
   </main>
 
   <footer class="page-footer">
-    <p class="page-footer__logo">
-      <svg class="page-footer__logo-image" width="102" height="34">
-        <use xlink:href="#logo-footer"/>
-      </svg>
-    </p>
-    <div class="page-footer__social">
-      <p class="page-footer__social-list">
-        <a href="instagram.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="22" height="21">
-            <use xlink:href="#icon-insta" />
-          </svg>
-        </a>
-        <a href="facebook.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="15" height="28">
-            <use xlink:href="#icon-fb" />
-          </svg>
-        </a>
-        <a href="twitter.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="23" height="20">
-            <use xlink:href="#icon-twitter" />
-          </svg>
-        </a>
-      </p>
-    </div>
-    <p class="page-footer__copyright-text">Разработано
-      <a href="htmlacademy.ru" class="page-footer__copyright-link">
+    <div class="page-footer__wrapper">
+      <a href="index.html" class="page-footer__logo" aria-label="Перейти на главную страницу">
+        <svg class="page-footer__logo-image" width="102" height="34">
+          <use xlink:href="#logo-footer" />
+        </svg>
+      </a>
+      <div class="page-footer__social">
+        <p class="page-footer__social-list">
+          <a href="instagram.com" class="page-footer__social-link" aria-label="Перейти на страницу в instagram">
+            <svg class="page-footer__social-image" width="22" height="21">
+              <use xlink:href="#icon-insta" />
+            </svg>
+          </a>
+          <a href="facebook.com" class="page-footer__social-link" aria-label="Перейти на страницу в facebook">
+            <svg class="page-footer__social-image" width="15" height="28">
+              <use xlink:href="#icon-fb" />
+            </svg>
+          </a>
+          <a href="twitter.com" class="page-footer__social-link">
+            <svg class="page-footer__social-image" width="23" height="20" aria-label="Перейти на страницу в twitter">
+              <use xlink:href="#icon-twitter" />
+            </svg>
+          </a>
+        </p>
+      </div>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-text" aria-label="Перейти на страницу курса HTML Academy">Разработано
         <svg class="page-footer__copyright-image" width="27" height="34">
           <use xlink:href="#logo-htmlacademy" />
         </svg>
       </a>
-    </p>
+    </div>
   </footer>
-  <script>
-    var toggle = document.querySelector(".page-header__toggle");
-    var DOM = [
-      toggle,
-      document.querySelector(".page-header__nav"),
-    ];
-
-    DOM.forEach(element => {
-      element.classList.remove("menu-open--default");
-      element.classList.remove("menu-open");
-    });
-
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      DOM.forEach(element => {
-        element.classList.toggle("menu-open");
-      });
-    });
-
-  </script>
+  <section class="popup popup--catalog visually-hidden">
+    <h3 class="popup__header">Добавить в корзину</h3>
+    <p class="popup__size">Выберите размер:</p>
+    <ul class="popup__sizes">
+      <li class="popup__sizes-item popup__sizes-item--active">S</li>
+      <li class="popup__sizes-item">M</li>
+      <li class="popup__sizes-item">L</li>
+    </ul>
+    <a href="#" class="popup__button-add">Добавить</a>
+  </section>
+  <div class="page-opacity visually-hidden"></div>
+  <script src="js/popup-catalog.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

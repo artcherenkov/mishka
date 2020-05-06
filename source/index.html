@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
       <ul class="page-header__nav-list">
         <li class="page-header__nav-item page-header__nav-item--logo">
           <div class="page-header__controls">
-            <a href="index.html" class="page-header__logo-link">
+            <a class="page-header__logo-link">
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -26,7 +27,7 @@
                   height="35">
               </picture>
             </a>
-            <button type="button" class="page-header__toggle menu-open menu-open--default">
+            <button type="button" class="page-header__toggle menu-open menu-open--default" aria-label="Открыть/закрыть главное меню">
               <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
                 <use xlink:href="#icon-menu-open" />
               </svg>
@@ -71,27 +72,30 @@
     </nav>
   </header>
   <main class="page-main">
-    <div class="page-main__header-wrapper">
-      <h1 class="page-main__header page-main__header--index">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
-      <div class="page-main__categories">
-        <ul class="page-main__categories-list">
-          <li class="page-main__categories-item page-main__categories-item--light">
-            <a class="page-main__categories-link" href="#">Предметы<br>интерьера
-              <svg class="page-main__categories-image" width="40" height="62">
-                <use xlink:href="#icon-interior" />
-              </svg>
-            </a>
-          </li>
-          <li class="page-main__categories-item page-main__categories-item--dark">
-            <a class="page-main__categories-link page-main__categories-link--dark" href="#">Детские<br>игрушки
-              <svg class="page-main__categories-image--dark" width="60" height="60">
-                <use xlink:href="#icon-toy" />
-              </svg></a>
-          </li>
-        </ul>
+    <div class="page-main__wrapper">
+      <div class="page-main__header-wrapper">
+        <h1 class="page-main__header page-main__header--index">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
+        <div class="page-main__categories">
+          <ul class="page-main__categories-list">
+            <li class="page-main__categories-item page-main__categories-item--light">
+              <a class="page-main__categories-link" href="#">Предметы<br>интерьера
+                <svg class="page-main__categories-image" width="40" height="62">
+                  <use xlink:href="#icon-interior" />
+                </svg>
+              </a>
+            </li>
+            <li class="page-main__categories-item page-main__categories-item--dark">
+              <a class="page-main__categories-link page-main__categories-link--dark" href="#">Детские<br>игрушки
+                <svg class="page-main__categories-image--dark" width="60" height="60">
+                  <use xlink:href="#icon-toy" />
+                </svg></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-main__zigzag"></div>
       </div>
-      <div class="page-main__zigzag"></div>
     </div>
+
     <section class="product-of-the-week">
       <div class="product-of-the-week__wrapper">
         <div class="product-of-the-week__header">
@@ -102,20 +106,26 @@
           <p class="product-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести
             расцветках и трех размерах.</p>
           <ul class="product-of-the-week__list">
-            <ul class="product-of-the-week__row">
-              <li class="product-of-the-week__cell product-of-the-week__option">Цвет:</li>
-              <li class="product-of-the-week__cell product-of-the-week__value">«Тиффани»/серый</li>
-            </ul>
-            <ul class="product-of-the-week__row">
-              <li class="product-of-the-week__cell product-of-the-week__option">Диаметр:</li>
-              <li class="product-of-the-week__cell product-of-the-week__value">25 см</li>
-            </ul>
-            <ul class="product-of-the-week__row">
-              <li class="product-of-the-week__cell product-of-the-week__option">Высота:</li>
-              <li class="product-of-the-week__cell product-of-the-week__value">15 см</li>
-            </ul>
+            <li>
+              <ul class="product-of-the-week__row">
+                <li class="product-of-the-week__cell product-of-the-week__option">Цвет:</li>
+                <li class="product-of-the-week__cell product-of-the-week__value">«Тиффани»/серый</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="product-of-the-week__row">
+                <li class="product-of-the-week__cell product-of-the-week__option">Диаметр:</li>
+                <li class="product-of-the-week__cell product-of-the-week__value">25 см</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="product-of-the-week__row">
+                <li class="product-of-the-week__cell product-of-the-week__option">Высота:</li>
+                <li class="product-of-the-week__cell product-of-the-week__value">15 см</li>
+              </ul>
+            </li>
           </ul>
-          <a href="" class="product-of-the-week__image-link">
+          <a href="#" class="product-of-the-week__image-link">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
                 srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
@@ -136,7 +146,6 @@
             <a href="#" class="product-of-the-week__buy">Заказать</a>
           </div>
         </div>
-
       </div>
     </section>
     <section class="about">
@@ -188,7 +197,9 @@
         <h2 class="reviews__header">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item">
-            <p class="reviews__item-content">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__item-content">Я молодая мама, но всё равно фотографии не набирали и близко такого
+              количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+              и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <h4 class="reviews__item-name">Анастасия Красильникова</h4>
             <p class="reviews__item-insta">@misssssiskras</p>
           </li>
@@ -204,12 +215,12 @@
           </li>
         </ul>
         <div class="reviews__toggles">
-          <button type="button" class="reviews__toggle reviews__toggle--left">
+          <button type="button" class="reviews__toggle reviews__toggle--left" aria-label="Следующий отзыв">
             <svg class="reviews__toggle-image" width="50" height="26">
               <use xlink:href="#icon-left-arrow" />
             </svg>
           </button>
-          <button type="button" class="reviews__toggle reviews__toggle--right">
+          <button type="button" class="reviews__toggle reviews__toggle--right" aria-label="Предыдущий отзыв">
             <svg class="reviews__toggle-image" width="50" height="26">
               <use xlink:href="#icon-right-arrow" />
             </svg>
@@ -223,96 +234,92 @@
         <div class="contacts__content-wrapper">
           <h2 class="contacts__header">Контакты</h2>
           <ul class="contacts__list">
-            <ul class="contacts__row">
-              <li class="contacts__cell contacts__option">e-mail:</li>
-              <li class="contacts__cell contacts__value">
-                <a href="mailto:info@mimimishkashop.ru" class="contacts__value-mail">info@mimimishkashop.ru</a>
-              </li>
-            </ul>
-            <ul class="contacts__row">
-              <li class="contacts__cell contacts__option">адрес:</li>
-              <li class="contacts__cell contacts__value">
-                <address class="contacts__value-address">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис
-                  101</address>
-              </li>
-            </ul>
+            <li>
+              <ul class="contacts__row contacts__row--mail">
+                <li class="contacts__cell contacts__option">e-mail:</li>
+                <li class="contacts__cell contacts__value">
+                  <a href="mailto:info@mimimishkashop.ru" class="contacts__value-mail">info@mimimishkashop.ru</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="contacts__row">
+                <li class="contacts__cell contacts__option">адрес:</li>
+                <li class="contacts__cell contacts__value">
+                  <address class="contacts__value-address">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8,
+                    офис
+                    101</address>
+                </li>
+              </ul>
+            </li>
+
           </ul>
         </div>
         <div class="contacts__map-wrapper">
-          <!-- тут будет карта -->
+          <iframe class="contacts__map"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A74649a110e15b255c135e9b5e82f65d027b6b9bb0d96a6ccb3ef803593cb38d9&amp;source=constructor"
+            width="320" height="457"></iframe>
         </div>
         <div class="contacts__button-wrapper">
-          <a class="contacts__button-contact">Напишите нам</a>
+          <a href="#" class="contacts__button-contact">Напишите нам</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <p class="page-footer__logo">
-      <svg class="page-footer__logo-image" width="102" height="34">
-        <use xlink:href="#logo-footer" />
-      </svg>
-    </p>
-    <div class="page-footer__social">
-      <p class="page-footer__social-list">
-        <a href="instagram.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="22" height="21">
-            <use xlink:href="#icon-insta" />
-          </svg>
-        </a>
-        <a href="facebook.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="15" height="28">
-            <use xlink:href="#icon-fb" />
-          </svg>
-        </a>
-        <a href="twitter.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="23" height="20">
-            <use xlink:href="#icon-twitter" />
-          </svg>
-        </a>
-      </p>
-    </div>
-    <p class="page-footer__copyright-text">Разработано
-      <a href="htmlacademy.ru" class="page-footer__copyright-link">
+    <div class="page-footer__wrapper">
+      <a href="index.html" class="page-footer__logo" aria-label="Перейти на главную страницу">
+        <svg class="page-footer__logo-image" width="102" height="34">
+          <use xlink:href="#logo-footer" />
+        </svg>
+      </a>
+      <div class="page-footer__social">
+        <p class="page-footer__social-list">
+          <a href="instagram.com" class="page-footer__social-link" aria-label="Перейти на страницу в instagram">
+            <svg class="page-footer__social-image" width="22" height="21">
+              <use xlink:href="#icon-insta" />
+            </svg>
+          </a>
+          <a href="facebook.com" class="page-footer__social-link" aria-label="Перейти на страницу в facebook">
+            <svg class="page-footer__social-image" width="15" height="28">
+              <use xlink:href="#icon-fb" />
+            </svg>
+          </a>
+          <a href="twitter.com" class="page-footer__social-link">
+            <svg class="page-footer__social-image" width="23" height="20" aria-label="Перейти на страницу в twitter">
+              <use xlink:href="#icon-twitter" />
+            </svg>
+          </a>
+        </p>
+      </div>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-text" aria-label="Перейти на страницу курса HTML Academy">Разработано
         <svg class="page-footer__copyright-image" width="27" height="34">
           <use xlink:href="#logo-htmlacademy" />
         </svg>
       </a>
-    </p>
+    </div>
   </footer>
 
-  <section class="popup popup--add-to-cart visually-hidden">
+  <section class="popup popup visually-hidden">
     <h3 class="popup__header">Добавить в корзину</h3>
-    <p class="popup__size">Выберите размер</p>
+    <p class="popup__size">Выберите размер:</p>
     <ul class="popup__sizes">
-      <li class="popup__sizes-item popup__sizes-item--active">S</li>
-      <li class="popup__sizes-item">M</li>
-      <li class="popup__sizes-item">L</li>
+      <li class="popup__sizes-item">
+        <button class="popup__sizes-button">S</button>
+      </li>
+      <li class="popup__sizes-item">
+        <button class="popup__sizes-button">M</button>
+      </li>
+      <li class="popup__sizes-item">
+        <button class="popup__sizes-button">L</button>
+      </li>
     </ul>
-    <a href="#" class="popup__button-add">Добавить</a>
+    <button type="submit" class="popup__button-add">Добавить</button>
   </section>
-
-  <script>
-    var toggle = document.querySelector(".page-header__toggle");
-    var DOM = [
-      toggle,
-      document.querySelector(".page-header__nav"),
-    ];
-
-    DOM.forEach(element => {
-      element.classList.remove("menu-open--default");
-      element.classList.remove("menu-open");
-    });
-
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      DOM.forEach(element => {
-        element.classList.toggle("menu-open");
-      });
-    });
-
-  </script>
+  <div class="page-opacity visually-hidden"></div>
+  <script src="js/popup.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

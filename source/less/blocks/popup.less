@@ -1,7 +1,11 @@
 .popup {
-  width: 100%;
-  position: absolute;
-  bottom: 100px;
+  width: 320px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -150px;
+  margin-left: -160px;
+  z-index: 10;
   padding: 36px 30px 46px;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   background-color: white;
@@ -12,14 +16,14 @@
 .popup__header {
   margin: 0;
   padding-bottom: 25px;
-  .setFont(18px, black, 30px, @bold, center);
+  .setFont(25px, black, 30px, @bold, center);
+  text-transform: uppercase;
 }
 
 .popup__size {
   margin: 0;
   padding-bottom: 26px;
   .setFont(15px, @dark-grey, 30px, @regular, center);
-  text-align: center;
 }
 
 .popup__sizes {
@@ -27,13 +31,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 31px;
 }
 
-.popup__sizes-item {
-  width: 31%;
-  .setFont(17px, @dark-grey, 48px, @bold, center);
+.popup__sizes-button {
+  width: 82px;
+  background-color: transparent;
   border: 2px solid rgba(@dark-grey-rgb, 0.1);
-  margin-bottom: 31px;
+  .setFont(17px, @dark-grey, 48px, @bold, center);
+
+  &:hover {
+    border: 2px solid rgba(@dark-grey-rgb, 0.3);
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @green;
+    outline: 2px solid @green;
+  }
 
   &--active {
     border: 2px solid @green;
@@ -43,8 +58,50 @@
 .popup__button-add {
   width: 100%;
   display: block;
+  border: none;
+
   .setFont(17px, white, 48px, @bold, center);
   text-decoration: none;
   text-transform: uppercase;
   background-color: @green;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet) {
+  .popup {
+    width: 568px;
+    left: 50%;
+    margin-left: -284px;
+  }
+
+  .popup__header {
+    .setFont(30px, black, 57px, @bold, center);
+  }
+
+  .popup__size {
+    .setFont(17px, @dark-grey, 30px, @regular, center);
+  }
+
+  .popup__sizes {
+    width: 350px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .popup__sizes-button {
+    width: 112px;
+    margin-bottom: 0;
+  }
+
+  .popup__button-add {
+    margin: 0 auto;
+    width: 350px;
+  }
 }

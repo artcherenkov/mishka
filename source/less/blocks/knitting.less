@@ -139,6 +139,16 @@
   font-weight: @bold;
   border: solid 2px #444444;
   background-color: transparent;
+
+  &:hover {
+    background-color: @dark-grey;
+    color: white;
+  }
+
+  &:active {
+    background-color: @dark-grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet) {
@@ -350,10 +360,36 @@
   }
 
   .knitting__header {
-    top: 30px;
+    top: 40px;
     left: 50px;
     position: absolute;
     border: none;
+  }
+
+
+  .knitting__type-header {
+    top: 49px;
+    left: 115px;
+  }
+
+  .knitting__color-header {
+    top: 67px;
+    left: 112px;
+  }
+
+  .knitting__personal-header {
+    top: 67px;
+    left: 112px;
+  }
+
+  .knitting__contact-header {
+    top: 26px;
+    left: 112px;
+  }
+
+  .knitting__extra-header {
+    top: 70px;
+    left: 113px;
   }
 
   .knitting__list,
@@ -415,12 +451,6 @@
     margin-bottom: 0;
   }
 
-  //чтобы усилить селектор
-  // .knitting__contact-item,
-  // .knitting__contact-item:not(:last-child) {
-  //   padding-bottom: 10px;
-  // }
-
   .knitting__contact-item,
   .knitting__contact-item:last-child {
     padding-top: 0;
@@ -436,6 +466,13 @@
     &--tel {
       top: 18px;
       right: 8px;
+    }
+  }
+
+  .knitting__contact-input-wrapper {
+    &:hover svg {
+      fill: @green;
+      opacity: 1;
     }
   }
 
