@@ -7,27 +7,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
   <header class="page-header page-header--index">
-    <!-- <div class="page-header__controls">
-      <a href="index.html" class="page-header__logo-link">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип Mishka" width="86" height="35">
-        </picture>
-      </a>
-      <button type="button" class="page-header__toggle menu-open menu-open--default">
-        <svg class="page-header__toggle-image page-header__toggle-image--open" width="20" height="14">
-          <use xlink:href="#icon-menu-open" />
-        </svg>
-        <svg class="page-header__toggle-image page-header__toggle-image--close" width="21" height="20">
-          <use xlink:href="#icon-menu-close" />
-        </svg>
-      </button>
-    </div> -->
     <nav class="page-header__nav menu-open">
       <ul class="page-header__nav-list">
         <li class="page-header__nav-item page-header__nav-item--logo">
@@ -54,7 +38,7 @@
           <a href="catalog.html" class="page-header__nav-link">Каталог товаров</a>
         </li>
         <li class="page-header__nav-item page-header__nav-item--knitting">
-          <a href="form.html" class="page-header__nav-link">Вязание на заказ</a>
+          <a class="page-header__nav-link">Вязание на заказ</a>
         </li>
         <li class="page-header__nav-item page-header__nav-item--search">
           <a href="#" class="page-header__nav-link">
@@ -93,13 +77,11 @@
       <h1 class="page-main__header page-main__header--form">Вязание на заказ</h1>
       <div class="page-main__zigzag"></div>
     </div>
-
     <section class="knitting">
       <div class="knitting__intro-wrapper">
         <p class="knitting__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
           свяжемся с вами, чтобы уточнить детали.</p>
       </div>
-
       <form class="knitting__form input" method="post" action="https://echo.htmlacademy.ru">
         <div class="knitting__block knitting__type-wrapper">
           <fieldset class="knitting__type knitting__part">
@@ -184,7 +166,6 @@
                 <input class="knitting__contact-input input__text" type="tel" id="tel" name="tel" placeholder="+7 XXX XXX XX XX*" required>
               </div>
             </div>
-
           </fieldset>
           <fieldset class="knitting__contact knitting__part">
             <legend class="knitting__contact-header knitting__contact-header--email knitting__header">e-mail</legend>
@@ -198,7 +179,6 @@
                 placeholder="Ваш Email*" required>
             </div>
         </div>
-
         </fieldset>
         </div>
         <div class="knitting__block knitting__extra-wrapper">
@@ -209,7 +189,6 @@
               <textarea class="knitting__extra-input input__textarea" name="extra" id="extra"
                 placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
-
           </fieldset>
         </div>
         <div class="knitting__controls">
@@ -221,58 +200,39 @@
   </main>
 
   <footer class="page-footer">
-    <p class="page-footer__logo">
-      <svg class="page-footer__logo-image" width="102" height="34">
-        <use xlink:href="#logo-footer" />
-      </svg>
-    </p>
-    <div class="page-footer__social">
-      <p class="page-footer__social-list">
-        <a href="instagram.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="22" height="21">
-            <use xlink:href="#icon-insta" />
-          </svg>
-        </a>
-        <a href="facebook.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="15" height="28">
-            <use xlink:href="#icon-fb" />
-          </svg>
-        </a>
-        <a href="twitter.com" class="page-footer__social-link">
-          <svg class="page-footer__social-image" width="23" height="20">
-            <use xlink:href="#icon-twitter" />
-          </svg>
-        </a>
-      </p>
-    </div>
-    <p class="page-footer__copyright-text">Разработано
-      <a href="htmlacademy.ru" class="page-footer__copyright-link">
+    <div class="page-footer__wrapper">
+      <a href="index.html" class="page-footer__logo" aria-label="Перейти на главную страницу">
+        <svg class="page-footer__logo-image" width="102" height="34">
+          <use xlink:href="#logo-footer" />
+        </svg>
+      </a>
+      <div class="page-footer__social">
+        <p class="page-footer__social-list">
+          <a href="instagram.com" class="page-footer__social-link" aria-label="Перейти на страницу в instagram">
+            <svg class="page-footer__social-image" width="22" height="21">
+              <use xlink:href="#icon-insta" />
+            </svg>
+          </a>
+          <a href="facebook.com" class="page-footer__social-link" aria-label="Перейти на страницу в facebook">
+            <svg class="page-footer__social-image" width="15" height="28">
+              <use xlink:href="#icon-fb" />
+            </svg>
+          </a>
+          <a href="twitter.com" class="page-footer__social-link">
+            <svg class="page-footer__social-image" width="23" height="20" aria-label="Перейти на страницу в twitter">
+              <use xlink:href="#icon-twitter" />
+            </svg>
+          </a>
+        </p>
+      </div>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-text" aria-label="Перейти на страницу курса HTML Academy">Разработано
         <svg class="page-footer__copyright-image" width="27" height="34">
           <use xlink:href="#logo-htmlacademy" />
         </svg>
       </a>
-    </p>
+    </div>
   </footer>
-  <script>
-    var toggle = document.querySelector(".page-header__toggle");
-    var DOM = [
-      toggle,
-      document.querySelector(".page-header__nav"),
-    ];
-
-    DOM.forEach(element => {
-      element.classList.remove("menu-open--default");
-      element.classList.remove("menu-open");
-    });
-
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      DOM.forEach(element => {
-        element.classList.toggle("menu-open");
-      });
-    });
-
-  </script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

@@ -1,13 +1,3 @@
-/*
-Логика поведения меню.
-- Выключенный js: все элементы меню в потоке
-- Включенный js закрытое меню: в потоке только первый элемент меню
-- Включенный js открытое меню: в потоке все элементы
-
-За открытое меню отвечает класс menu-open. Если он присутствует, все меню находится в потоке. Если нет - только первый элемент.
-
-menu-open--default - класс для кнопки, которая отображается, если этот класс назначен. Если класс menu-open, то отображается крестик, если ни одного класс - бургер
-*/
 .page-header {
   width: 100%;
 }
@@ -25,11 +15,11 @@ menu-open--default - класс для кнопки, которая отобра
 }
 
 .page-header__logo-link {
-  &:hover {
+  &[href]:hover {
     opacity: 0.6;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }
@@ -108,16 +98,16 @@ menu-open--default - класс для кнопки, которая отобра
   font-weight: @bold;
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.6;
   }
 
-  &:hover svg {
+  &[href]:hover svg {
     fill: @green;
     opacity: 1;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }
@@ -265,6 +255,8 @@ menu-open--default - класс для кнопки, которая отобра
 
 @media (min-width: @desktop) {
   .page-header__nav {
+    width: 1150px;
+    margin: 0 auto;
     padding: 0 50px;
     border-bottom: 1px solid @light-grey;
   }
@@ -305,13 +297,13 @@ menu-open--default - класс для кнопки, которая отобра
       font-size: 17px;
       line-height: 88px;
       padding-left: 35px;
+      border-bottom: none;
     }
 
     &--logo {
       order: 3;
       width: 320px;
-      // line-height: 88px;
-      border-bottom: 1px solid @light-grey;
+      border-bottom: none;
       flex-grow: 1;
     }
 
@@ -325,13 +317,18 @@ menu-open--default - класс для кнопки, которая отобра
       line-height: 88px;
       width: 82px;
       border: 1px solid @light-grey;
+      border-bottom: none;
       border-top: none;
+    }
+
+    &--search a {
+      height: 100%;
     }
 
     &--cart {
       order: 5;
       line-height: 88px;
-      border-bottom: 1px solid @light-grey;
+      border-bottom: none;
       min-width: 266px;
     }
 

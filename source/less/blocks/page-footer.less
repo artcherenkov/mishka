@@ -60,8 +60,15 @@
 }
 
 @media (min-width: @tablet) {
+
   .page-footer {
+    padding: 0;
+  }
+
+  .page-footer__wrapper {
     padding: 50px;
+    // width: 768px;
+    // margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,5 +106,12 @@
 
   .page-footer__copyright-text {
     padding: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-footer__wrapper {
+    width: 1150px;
+    margin: 0 auto;
   }
 }

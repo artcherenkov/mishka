@@ -48,6 +48,11 @@
     border: 2px solid @green;
   }
 
+  &:disabled + .input__check-label,
+  &:disabled + .input__check-label::before {
+    opacity: 0.5;
+  }
+
   &:checked + .input__check-label::after {
     opacity: 1;
   }
@@ -106,6 +111,11 @@
 
   &:focus + .input__radio-label::before {
     border: 2px solid @green;
+  }
+
+  &:disabled + .input__radio-label,
+  &:disabled + .input__radio-label::before {
+    opacity: 0.5;
   }
 
   &:checked + .input__radio-label::after {
