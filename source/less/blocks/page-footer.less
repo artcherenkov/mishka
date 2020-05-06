@@ -16,13 +16,7 @@
 .page-footer__social-link {
   display: block;
   text-decoration: none;
-}
 
-.page-footer__social-link svg {
-  fill: #231F20;
-}
-
-.page-footer__social-link {
   &:hover svg {
     fill: @green;
   }
@@ -32,9 +26,12 @@
   }
 }
 
+.page-footer__social-link svg {
+  fill: #231f20;
+}
+
 .page-footer__copyright-text {
   margin: 0;
-  display: block;
   .setFont(19px, black, 18px, @bold, center);
   display: flex;
   justify-content: center;

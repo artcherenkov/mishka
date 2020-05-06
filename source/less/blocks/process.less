@@ -8,11 +8,11 @@
   margin: 0 auto;
 
   &:hover {
-    box-shadow: 0px 6px 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
   &:active {
-    box-shadow: 0px 3px 5px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -94,28 +94,25 @@
 
   &:hover {
     background-color: @dark-grey;
-    color: white
+    color: white;
   }
 
   &:active {
     background-color: @dark-grey;
-    color: rgba(255, 255, 255, 0.3)
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
 @media (min-width: @tablet) {
-.process {
-  padding: 0 50px;
-  padding-bottom: 63px;
-}
+  .process {
+    padding: 0 50px;
+    padding-bottom: 63px;
+  }
 
   .process__wrapper {
-   max-width: initial;
+    max-width: initial;
     width: 668px;
     padding: 0;
-    // margin: 0 auto;
-    // padding: 0;
-
     display: flex;
     flex-direction: column;
   }
@@ -153,10 +150,10 @@
 }
 
 @media (min-width: @desktop) {
-.process {
-  padding: 0 50px;
-  padding-bottom: 105px;
-}
+  .process {
+    padding: 0 50px;
+    padding-bottom: 105px;
+  }
 
   .process__wrapper {
     position: relative;
