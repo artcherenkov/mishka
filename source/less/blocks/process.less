@@ -26,12 +26,21 @@
   .setFont(17px, black, 24px, @bold, left);
   border: 1px solid @light-grey;
   border-bottom: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 34px;
+    top: 30px;
+    background: url("../img/icon-video.svg");
+  }
 }
 
 .process__header-image {
   position: absolute;
-  left: 34px;
-  top: 30px;
+
   fill: @green;
 }
 
@@ -47,6 +56,8 @@
 .process__video-link {
   display: flex;
   position: absolute;
+  background-color: transparent;
+  border: none;
   top: 0;
   z-index: 1;
   width: 100%;

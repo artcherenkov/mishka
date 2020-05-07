@@ -40,8 +40,8 @@
           <a href="form.html" class="page-header__nav-link">Вязание на заказ</a>
         </li>
         <li class="page-header__nav-item page-header__nav-item--search">
-          <a href="#" class="page-header__nav-link">
-            <svg class="page-header__nav-image page-header__nav-image--search" width="18" height="18" alt="Поиск по сайту">
+          <a href="#" class="page-header__nav-link" aria-label="Поиск по сайту">
+            <svg class="page-header__nav-image page-header__nav-image--search" width="18" height="18">
               <use xlink:href="#icon-search" />
             </svg>
             <span class="page-header__search-text">Поиск по сайту</span>
@@ -74,7 +74,6 @@
     </div>
     <div class="page-main__header-wrapper page-main__header-wrapper--not-index">
     <h1 class="page-main__header page-main__header--catalog">Каталог товаров</h1>
-    <div class="page-main__zigzag"></div>
     </div>
     <section class="catalog">
       <div class="catalog__wrapper">
@@ -176,11 +175,7 @@
     </section>
     <section class="process">
       <div class="process__wrapper">
-        <h2 class="process__header">
-          <svg class="process__header-image" width="32" height="32">
-            <use xlink:href="#icon-video"/>
-          </svg>Процесс производства
-        </h2>
+        <h2 class="process__header">Процесс производства</h2>
         <div class="process__video">
           <div class="process__video-wrapper">
             <picture>
@@ -195,11 +190,11 @@
               <img class="process__video-poster" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
                 width="260" height="150" alt="Видео">
             </picture>
-            <a href="#" class="process__video-link" aria-label="Воспроизвести видео">
+            <button type="button" class="process__video-link" aria-label="Воспроизвести видео">
               <svg class="process__video-play" width="101" height="77">
                 <use xlink:href="#icon-play"/>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
         <div class="process__content-wrapper">
