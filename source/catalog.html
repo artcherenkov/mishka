@@ -243,15 +243,21 @@
       </a>
     </div>
   </footer>
-  <section class="popup popup--catalog visually-hidden">
+  <section class="popup visually-hidden">
     <h3 class="popup__header">Добавить в корзину</h3>
     <p class="popup__size">Выберите размер:</p>
     <ul class="popup__sizes">
-      <li class="popup__sizes-item popup__sizes-item--active">S</li>
-      <li class="popup__sizes-item">M</li>
-      <li class="popup__sizes-item">L</li>
+      <li class="popup__sizes-item">
+        <button class="popup__sizes-button">S</button>
+      </li>
+      <li class="popup__sizes-item">
+        <button class="popup__sizes-button">M</button>
+      </li>
+      <li class="popup__sizes-item">
+        <button class="popup__sizes-button">L</button>
+      </li>
     </ul>
-    <a href="#" class="popup__button-add">Добавить</a>
+    <button type="submit" class="popup__button-add">Добавить</button>
   </section>
   <div class="page-opacity visually-hidden"></div>
   <script src="js/popup-catalog.js"></script>
