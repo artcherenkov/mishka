@@ -73,9 +73,10 @@
     <div style="display: none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <div class="page-main__header-wrapper page-main__header-wrapper--not-index">
-      <h1 class="page-main__header page-main__header--form">Вязание на заказ</h1>
-      <!-- <div class="page-main__zigzag"></div> -->
+    <div class="page-main__wrapper page-main__wrapper--not-index">
+      <div class="page-main__header-wrapper page-main__header-wrapper--not-index">
+        <h1 class="page-main__header page-main__header--form">Вязание на заказ</h1>
+      </div>
     </div>
     <section class="knitting">
       <div class="knitting__intro-wrapper">
@@ -161,9 +162,10 @@
               <label class="visually-hidden" for="tel">Введите номер телефона</label>
               <div class="knitting__contact-input-wrapper knitting__contact-input-wrapper--tel">
                 <svg class="knitting__contact-input-icon knitting__contact-input-icon--tel" width="25" height="24">
-                  <use xlink:href="#icon-phone"/>
+                  <use xlink:href="#icon-phone" />
                 </svg>
-                <input class="knitting__contact-input input__text" type="tel" id="tel" name="tel" placeholder="+7 XXX XXX XX XX*" required>
+                <input class="knitting__contact-input input__text" type="tel" id="tel" name="tel"
+                  placeholder="+7 XXX XXX XX XX*" required>
               </div>
             </div>
           </fieldset>
@@ -173,13 +175,13 @@
               <label class="visually-hidden" for="mail">Введите почту</label>
               <div class="knitting__contact-input-wrapper knitting__contact-input-wrapper--mail">
                 <svg class="knitting__contact-input-icon knitting__contact-input-icon--mail" width="32" height="26">
-                  <use xlink:href="#icon-mail"/>
+                  <use xlink:href="#icon-mail" />
                 </svg>
-              <input class="knitting__contact-input input__text" type="email" id="mail" name="mail"
-                placeholder="Ваш Email*" required>
+                <input class="knitting__contact-input input__text" type="email" id="mail" name="mail"
+                  placeholder="Ваш Email*" required>
+              </div>
             </div>
-        </div>
-        </fieldset>
+          </fieldset>
         </div>
         <div class="knitting__block knitting__extra-wrapper">
           <fieldset class="knitting__extra knitting__part">
@@ -225,7 +227,8 @@
           </a>
         </p>
       </div>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-text" aria-label="Перейти на страницу курса HTML Academy">Разработано
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-text"
+        aria-label="Перейти на страницу курса HTML Academy">Разработано
         <svg class="page-footer__copyright-image" width="27" height="34">
           <use xlink:href="#logo-htmlacademy" />
         </svg>
